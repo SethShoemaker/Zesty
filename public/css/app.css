@@ -11299,14 +11299,19 @@ nav {
 }
 
 #navContainer {
-  width: 98vw;
+  width: 97vw;
+  height: 55px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#logoContainer,
+#logo {
   display: flex;
   align-items: center;
 }
 
 #logo {
-  display: flex;
-  align-items: center;
   font-size: 30px;
   text-decoration: none;
   color: #fff;
@@ -11314,9 +11319,22 @@ nav {
 
 #logo > img {
   height: 35px;
-  padding-right: 2px;
+  padding-right: 5px;
+}
+
+#searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchContainer > form {
+  height: 30px;
+  width: 30vw;
 }
 
 nav > ul {
   color: #fff;
+  display: flex;
+  align-items: center;
 }

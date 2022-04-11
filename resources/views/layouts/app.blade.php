@@ -21,4 +21,5 @@
         @yield('content')
     </main>
 </body>
+@include('inc.footer')
 </html>
