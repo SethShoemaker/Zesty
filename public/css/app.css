@@ -11285,7 +11285,7 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Outfit", sans-serif;
-  background-color: #ebebeb;
+  background-color: #f5f5f5;
 }
 
 nav {
@@ -11313,7 +11313,7 @@ nav {
 }
 
 #logo {
-  font-size: 30px;
+  font-size: 34px;
   text-decoration: none;
   color: #fff;
 }
@@ -11341,9 +11341,9 @@ nav > ul {
 }
 
 .container {
-  width: 80vw;
+  width: 90vw;
   padding: 4vh 3vw;
-  margin-top: 5vh;
+  margin: 5vh auto 10vh auto;
   background-color: #fff;
   min-height: 100vh;
 }

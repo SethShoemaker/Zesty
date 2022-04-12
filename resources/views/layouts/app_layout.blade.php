@@ -15,12 +15,13 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('stylesheets')
+
 </head>
 <body>
-    @include('inc.nav')
+    @include('inc.nav_inc')
     <main>
         @yield('content')
     </main>
 </body>
-@include('inc.footer')
+@include('inc.footer_inc')
 </html>
