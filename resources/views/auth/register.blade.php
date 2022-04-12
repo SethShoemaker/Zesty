@@ -31,9 +31,9 @@
             @enderror
         </div>
         <div class="col-12 my-3">
-            <label for="user">Username</label>
+            <label for="username">Username</label>
             
-            <input name="user" id='user' class="form-control" oninput="this.value=this.value.replace(/[\s]/g,'');" type="text" autocomplete="username" required>
+            <input name="username" id='username' class="form-control @error('username') is-invalid @enderror"" value="{{ old('username') }}" type="text" autocomplete="username" required>
         
             @error('username')
                 <span class="invalid-feedback" role="alert">
