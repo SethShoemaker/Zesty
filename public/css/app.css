@@ -11285,6 +11285,7 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Outfit", sans-serif;
+  background-color: #ebebeb;
 }
 
 nav {
@@ -11337,4 +11338,12 @@ nav > ul {
   color: #fff;
   display: flex;
   align-items: center;
+}
+
+.container {
+  width: 80vw;
+  padding: 4vh 3vw;
+  margin-top: 5vh;
+  background-color: #fff;
+  min-height: 100vh;
 }
