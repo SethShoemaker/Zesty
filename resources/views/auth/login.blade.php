@@ -9,7 +9,9 @@
     <form class='row' method="POST" action="{{ route('login') }}">
         @csrf
         <div class="col-12 my-3">
-            <label for="email">Email</label>
+            <label for="email">
+                Email
+            </label>
 
             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
         
@@ -20,7 +22,9 @@
             @enderror
         </div> 
         <div class="col-12 my-3">
-            <label for="password">Password</label>
+            <label for="password">
+                Password
+            </label>
 
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
         
@@ -30,10 +34,17 @@
                 </span>
             @enderror
         </div>
-        <div class="col-12 mb-1 mt-4 row">
-            <div class='col-6 offset-6 d-flex flex-row-reverse'>
+        <div class="col-6 mb-1 mt-4">
+            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+            <label class="form-check-label" for="remember">
+                Remember Me
+            </label>
+        </div>
+        <div class="col-6 mb-1 mt-4 row">
+            <div class='col-6 offset-6 d-flex align-items-center flex-row-reverse'>
                 <button type="submit" class="btn btn-primary">Login</button>
-                <a class='btn' href='/register'>Register</a>
+                <a class='btn btn-secondary' href='/register'>Register</a>
             </div>
         </div>
     </form>

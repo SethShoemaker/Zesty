@@ -3,7 +3,7 @@
         <div id="logoContainer">
             <a id='logo' href="{{ url('/') }}" role='logo'>
                 <img src='/images/ZestyIcon.svg'>
-                Zesty
+                {{ config('app.name') }}
             </a>
         </div>
         <div id="searchContainer">
