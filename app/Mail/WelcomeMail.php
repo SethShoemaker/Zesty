@@ -32,6 +32,6 @@ class WelcomeMail extends Mailable
     {
         return $this->view('mail.welcome')
             ->with('data', $this->data)
-            ->subject("Welcome to Zesty");
+            ->subject("Zesty account created");
     }
 }
