@@ -1,6 +1,7 @@
 .container {
   min-height: auto !important;
   max-width: 620px !important;
+  font-family: "Outfit", sans-serif;
 }
 
 .container .formTitle {

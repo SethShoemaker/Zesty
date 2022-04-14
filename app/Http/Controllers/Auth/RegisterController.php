@@ -68,7 +68,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // sends welcome email
-        Mail::to($data['email'])->send(new WelcomeMail());
+        Mail::to($data['email'])->send(new WelcomeMail($data));
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

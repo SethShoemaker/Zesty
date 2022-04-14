@@ -1,9 +1,10 @@
-// Variables
+// variables
 @import 'variables';
 
 .container{
     min-height: auto !important;
     max-width:620px !important;
+    font-family: $primary_font_family;
 }
 .container .formTitle{
     font-size: 32px;

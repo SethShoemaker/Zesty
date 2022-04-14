@@ -13,7 +13,7 @@
                 Name
             </label>
 
-            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autofocus>
         
             @error('name')
                 <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@
                 Email
             </label>
 
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
         
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -39,7 +39,7 @@
                 Username
             </label>
             
-            <input name="username" id='username' class="form-control @error('username') is-invalid @enderror"" value="{{ old('username') }}" type="text" autocomplete="username" required>
+            <input name="username" id='username' class="form-control @error('username') is-invalid @enderror"" value="{{ old('username') }}" type="text" required>
         
             @error('username')
                 <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
                 Password
             </label>
 
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
         
             @error('password')
                 <span class="invalid-feedback" role="alert">
@@ -65,7 +65,7 @@
                 Confirm Password
             </label>
             
-            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
         
             @error('password')
                 <span class="invalid-feedback" role="alert">

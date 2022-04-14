@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -13,15 +13,14 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
    
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     @yield('stylesheets')
-
 </head>
 <body>
     @include('inc.nav_inc')
     <main>
         @yield('content')
-    </main>
+    </main>    
 </body>
 @include('inc.footer_inc')
 </html>
