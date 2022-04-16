@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeMail;
+use App\Notifications\welcome;
 
 class RegisterController extends Controller
 {
@@ -67,13 +68,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // sends welcome email
-        Mail::to($data['email'])->send(new WelcomeMail($data));
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'username' => $data['username'],
         ]);
+
+        $user->notify(new welcome($data['name']));
+
+        return $user;
     }
 }

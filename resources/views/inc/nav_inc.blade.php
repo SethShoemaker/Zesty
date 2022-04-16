@@ -8,11 +8,13 @@
         </div>
         <div id="searchContainer">
             <form action='/search' method='post'>
-                <input type='text'>
-                <button>Search</button>
+                <input id='q' type='text' name='q' placeholder='Search'>
+                <button type='submit'>
+                    <img src='/images/iconSearch.svg'>
+                </button>
             </form>
         </div>
-        <ul id="authContainer">
+        <div id="authContainer">
             @guest
                 <a  href="{{ url('/login') }}">
                     Login
@@ -25,6 +27,6 @@
                     {{ Auth::user()->name }}
                 </a>
             @endguest
-        </ul>
+            </div>
     </div>
 </nav>

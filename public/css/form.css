@@ -39,6 +39,11 @@
   font-weight: 500;
 }
 
+.form-check-label,
+.form-check-input {
+  cursor: pointer;
+}
+
 .form-check-input {
   background-color: #f5f5f5 !important;
 }

@@ -76,8 +76,6 @@
         <div class="col-12 mb-1 mt-4 row">
             <div class='col-6 offset-6 d-flex flex-row-reverse'>
                 <button type="submit" class="btn btn-primary">Register</button>
-
-                <a class='btn' href='login.php'>Login</a>
             </div>
         </div>
     </form>

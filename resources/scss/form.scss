@@ -36,6 +36,10 @@
     border: none;
     font-weight: 500;
 }
+.form-check-label,
+.form-check-input{
+    cursor: pointer;
+}
 .form-check-input{
     background-color: $offWhiteLight !important;
 }

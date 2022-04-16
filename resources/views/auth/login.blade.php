@@ -34,23 +34,37 @@
                 </span>
             @enderror
         </div>
-        <div class="col-6 mb-1 mt-4">
+        <div class="col-12 my-3">
             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
             <label class="form-check-label" for="remember">
                 Remember Me
             </label>
         </div>
-        <div class="col-6 mb-1 mt-4 row">
-            <div class='col-6 offset-6 d-flex align-items-center flex-row-reverse'>
-                <button type="submit" class="btn btn-primary">Login</button>
-                <a class='btn btn-secondary' href='/register'>Register</a>
-            </div>
+        <div class="col-12 my-3 d-flex align-items-center flex-row-reverse">
+            <button type="submit" class="btn btn-primary">Login</button>
+            @if (Route::has('password.request'))
+                <a class="btn btn-secondary" href="{{ route('password.request') }}">
+                    Forgot Your Password?
+                </a>
+            @endif
         </div>
     </form>
     
     
-    
+    {{-- <div class="col-12 row">
+        <div class='col-md-4 my-3'>
+            <a class='btn btn-secondary' href='/register'>Create account</a>
+        </div>
+        <div class="col-md-8 my-3 d-flex align-items-center flex-row-reverse">
+            <button type="submit" class="btn btn-primary">Login</button>
+            @if (Route::has('password.request'))
+            <a class="btn btn-secondary" href="{{ route('password.request') }}">
+                Forgot Your Password?
+            </a>
+            @endif
+        </div>
+    </div> --}}
     
     {{-- <div class="row justify-content-center">
         <div class="col-md-8">

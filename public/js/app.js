@@ -1171,8 +1171,8 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/mail": 0,
 /******/ 			"css/main": 0,
+/******/ 			"css/mail": 0,
 /******/ 			"css/form": 0
 /******/ 		};
 /******/ 		
@@ -1223,10 +1223,10 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/mail","css/main","css/form"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/mail","css/main","css/form"], () => (__webpack_require__("./resources/scss/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/mail","css/main","css/form"], () => (__webpack_require__("./resources/scss/form.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/mail","css/main","css/form"], () => (__webpack_require__("./resources/scss/mail.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/scss/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/scss/form.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/scss/mail.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
