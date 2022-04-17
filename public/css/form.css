@@ -10,7 +10,7 @@
 }
 
 .container input {
-  border: 0.7px solid #222222 !important;
+  border: 1px solid #222222 !important;
   border-radius: 0 !important;
   background-color: #f5f5f5;
   font-weight: 300 !important;
@@ -21,12 +21,13 @@
 .container select:focus {
   box-shadow: none;
   background-color: #e0e0e0;
-  border: 0.7px solid #222222;
+  border: inherit;
 }
 
-.container .is-invalid {
+.container .is-invalid,
+.container .is-invalid:focus {
   box-shadow: none !important;
-  border-color: #dc3545;
+  border-color: #dc3545 !important;
 }
 
 .container .btn {

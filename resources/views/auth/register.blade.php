@@ -13,7 +13,7 @@
                 Name
             </label>
 
-            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autofocus>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autofocus autocomplete="name">
         
             @error('name')
                 <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@
                 Email
             </label>
 
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required>
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
         
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -39,7 +39,7 @@
                 Username
             </label>
             
-            <input name="username" id='username' class="form-control @error('username') is-invalid @enderror"" value="{{ old('username') }}" type="text" required>
+            <input name="username" id='username' class="form-control @error('username') is-invalid @enderror"" value="{{ old('username') }}" type="text" required autocomplete="username">
         
             @error('username')
                 <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
                 Password
             </label>
 
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
         
             @error('password')
                 <span class="invalid-feedback" role="alert">
@@ -74,7 +74,7 @@
             @enderror
         </div>
         <div class="col-12 mb-1 mt-4 row">
-            <div class='col-6 offset-6 d-flex flex-row-reverse'>
+            <div class='col-12 d-flex flex-row-reverse'>
                 <button type="submit" class="btn btn-primary">Register</button>
             </div>
         </div>

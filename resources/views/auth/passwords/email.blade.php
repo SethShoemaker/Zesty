@@ -1,8 +1,41 @@
 @extends('layouts.app_layout')
 @section('title', "Reset Password")
+@section('stylesheets')
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <h1 class="formTitle mb-3">Reset Password</h1>
+    <form class='row' action="{{ route('password.email') }}" method="POST">
+        @csrf
+        <div class="col-12 my-3">
+            <label for="email">
+                Email
+            </label>
+
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+        
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+        <div class="col-12 mb-1 mt-4 row">
+            <div class='col-12 d-flex flex-row-reverse'>
+                <button type="submit" class="btn btn-primary">
+                    Send Password Reset Link
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+    {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
@@ -42,6 +75,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection
