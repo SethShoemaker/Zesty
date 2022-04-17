@@ -24,7 +24,7 @@
                 </a>
             @else
                 <a  href="{{ url('/dashboard') }}">
-                    {{ Auth::user()->name }}
+                   My Account
                 </a>
             @endguest
             </div>

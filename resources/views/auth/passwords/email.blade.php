@@ -8,6 +8,13 @@
     <h1 class="formTitle mb-3">Reset Password</h1>
     <form class='row' action="{{ route('password.email') }}" method="POST">
         @csrf
+
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+
         <div class="col-12 my-3">
             <label for="email">
                 Email

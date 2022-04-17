@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +16,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index']);
+Route::get('/', [WelcomeController::class, 'index']);
 
 Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index']);

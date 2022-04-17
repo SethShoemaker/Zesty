@@ -92,10 +92,15 @@ nav{
 #searchContainer > form > button > img{
     height:65%;
 }
-nav > ul{
-    color:#fff;
+#authContainer{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+}
+#authContainer > a{
+    margin-left:20px;
+    color: #fff;
+    text-decoration: none;
 }
 .container{
     width:90vw;

@@ -1,31 +1,36 @@
 @extends('layouts.app_layout')
 @section('title', "Dashboard")
+@section('stylesheets')
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+    @if (session('status'))
+        {{ session('status') }}
+    @endif
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    <div id="infoContainer" class='row'>
+        <div class="col-md-3 col-lg-2" id='avatarContainer'>
+            <form id="avatarFrame">
+                <img src='https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'>
+                <label for="avatar" id='overlay'></label>
+                <input type="file" name="avatar" id="avatar" accept="image/jpg, image/jpeg, image/png, image/svg">
+            </form>
+        </div>
 
-                    {{ __('You are logged in!') }}
-
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </div>
+        <div id="nameContainer" class='col-md-8'>
+            <h1>{{ $username }}</h1>
+            <h2>{{ $name }}</h2>
+            <p>Account created on {{ $created }}</p>
         </div>
     </div>
+
+    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        Logout
+    </a>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        @csrf
+    </form>
 </div>
 @endsection

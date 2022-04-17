@@ -1038,6 +1038,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./resources/scss/dashboard.scss":
+/*!***************************************!*\
+  !*** ./resources/scss/dashboard.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy9kYXNoYm9hcmQuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Nzcy9kYXNoYm9hcmQuc2Nzcz85NGNjIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/scss/dashboard.scss\n");
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -1173,6 +1184,7 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 			"/js/app": 0,
 /******/ 			"css/main": 0,
 /******/ 			"css/mail": 0,
+/******/ 			"css/dashboard": 0,
 /******/ 			"css/form": 0
 /******/ 		};
 /******/ 		
@@ -1223,10 +1235,11 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/scss/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/scss/form.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/mail","css/form"], () => (__webpack_require__("./resources/scss/mail.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/dashboard","css/form"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/dashboard","css/form"], () => (__webpack_require__("./resources/scss/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/dashboard","css/form"], () => (__webpack_require__("./resources/scss/form.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/mail","css/dashboard","css/form"], () => (__webpack_require__("./resources/scss/mail.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/mail","css/dashboard","css/form"], () => (__webpack_require__("./resources/scss/dashboard.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
