@@ -23,4 +23,5 @@
     </main>    
 </body>
 @include('inc.footer_inc')
+@yield('scripts')
 </html>

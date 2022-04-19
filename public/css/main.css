@@ -11307,7 +11307,7 @@ main {
 nav {
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -11316,15 +11316,34 @@ nav {
   background-color: #222222;
   height: 55px;
   width: 100vw;
+  z-index: 1;
 }
 
 #navContainer {
-  width: 97vw;
+  width: 96vw;
   height: 55px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
 }
 
+@media screen and (min-width: 768px) {
+  #navMobile {
+    display: none;
+  }
+
+  #navDesktop > #navContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navDesktop {
+    display: none;
+  }
+
+  #navMobile > #navContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
 #logoContainer,
 #logo {
   display: flex;
@@ -11332,7 +11351,7 @@ nav {
 }
 
 #logo {
-  font-size: 34px;
+  font-size: 2rem;
   text-decoration: none;
   color: #fff;
 }
@@ -11390,10 +11409,34 @@ nav {
   justify-content: flex-end;
 }
 
-#authContainer > a {
+#authContainer > a,
+#authContainer > .dropdown > a {
   margin-left: 20px;
   color: #fff;
   text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  border: 1px solid #222222;
+}
+
+.dropdown-item:hover {
+  background-color: #e0e0e0;
+}
+
+#iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#iconContainer > a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .container {

@@ -1,7 +1,3 @@
-#infoContainer {
-  align-items: center;
-}
-
 #avatarContainer {
   display: flex;
   align-items: center;
@@ -9,46 +5,124 @@
 }
 
 #avatarFrame {
+  cursor: pointer;
   position: relative;
 }
 
 #avatarFrame > img {
-  position: relative;
-  max-height: 20vh;
+  max-height: 18vh;
   max-width: 100%;
 }
 
-#avatarFrame > #overlay {
+#avatarFrame > #avatarEditIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -13px;
+  right: -13px;
+  height: 27px;
+  width: 27px;
+  padding: 5px;
+  background-color: #222222;
+  border-radius: 50%;
+}
+
+#avatarFrame > #avatarEditIcon > img {
   height: 100%;
   width: 100%;
-}
-
-#avatarFrame:hover > #overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-#avatarFrame > input {
-  display: none;
 }
 
 #nameContainer {
   margin-top: 12px;
 }
 
-#nameContainer > h1 {
-  font-size: 2.8em;
-  margin-bottom: 15px;
-}
-
-#nameContainer > h2 {
-  font-size: 1.1em;
-  margin-bottom: 5px;
-}
-
 #nameContainer > p {
   font-weight: 300;
+}
+
+#avatarFormContainer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#screenOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+#avatarForm {
+  position: relative;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  height: 60vh;
+  width: 40vw;
+  min-width: 300px;
+  z-index: 3;
+  background-color: #fff;
+}
+
+#avatarPreview {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#avatarPreview > img {
+  max-height: 70%;
+  max-width: 60%;
+}
+
+#updateButtons {
+  text-align: center;
+}
+
+#updateButtons > label,
+#updateButtons > button {
+  background-color: #e0e0e0;
+  border: none;
   font-size: 1em;
+  margin: 10px 4vw;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#updateButtons > input {
+  display: none;
+}
+
+#submitButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#submitButtons > button {
+  border: none;
+  font-size: 1em;
+  margin: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#avatarFormCancel {
+  background-color: #222222;
+}
+
+#avatarFormSave {
+  background-color: #1e8b1e;
 }

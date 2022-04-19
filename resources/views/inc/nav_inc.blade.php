@@ -1,4 +1,18 @@
-<nav>
+<nav id='navMobile'>
+    <div id="navContainer">
+        <div id="logoContainer">
+            <a id='logo' href="{{ url('/') }}" role='logo'>
+                <img src='/images/ZestyIcon.svg'>
+                {{ config('app.name') }}
+            </a>
+        </div>
+        <div id="iconContainer">
+            <a>Search</a>
+            <a>Profile</a>
+        </div>
+    </div>
+</nav>
+<nav id="navDesktop">
     <div id="navContainer">
         <div id="logoContainer">
             <a id='logo' href="{{ url('/') }}" role='logo'>
@@ -23,10 +37,27 @@
                     Register
                 </a>
             @else
-                <a  href="{{ url('/dashboard') }}">
-                   My Account
-                </a>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" role="button" id="navDropdownToggler" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ Auth::user()->username }}
+                    </a>
+                
+                    <ul class="dropdown-menu" aria-labelledby="navDropdownToggler">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+                
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
+                </div>
             @endguest
-            </div>
+        </div>
     </div>
 </nav>
