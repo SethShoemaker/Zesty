@@ -2,6 +2,7 @@
 @section('title', "Register")
 @section('stylesheets')
     <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
 @endsection
 @section('content')
 <div class="container">

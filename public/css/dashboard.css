@@ -1,128 +1,150 @@
-#avatarContainer {
+#profileHeading {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-#avatarFrame {
-  cursor: pointer;
-  position: relative;
+#userDetails,
+#userAvatar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-#avatarFrame > img {
-  max-height: 18vh;
-  max-width: 100%;
+#userAvatar > img {
+  max-width: 30vw;
+  max-height: 22vh;
+  margin-right: 2vw;
 }
 
-#avatarFrame > #avatarEditIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -13px;
-  right: -13px;
-  height: 27px;
-  width: 27px;
-  padding: 5px;
-  background-color: #222222;
-  border-radius: 50%;
+#userDetails h1 {
+  font-weight: 500;
+  font-size: 52px;
+  margin-bottom: 10px;
+  letter-spacing: 0.7px;
 }
 
-#avatarFrame > #avatarEditIcon > img {
-  height: 100%;
-  width: 100%;
+#userDetails h2 {
+  font-weight: 400;
+  font-size: 19px;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
 }
 
-#nameContainer {
-  margin-top: 12px;
+#userDetails p {
+  font-weight: 200;
+  font-size: 19px;
+  margin-bottom: 0px;
+  letter-spacing: 0.5px;
 }
 
-#nameContainer > p {
-  font-weight: 300;
+#userSummary {
+  margin: 20px;
+  font-size: 17px;
+  font-weight: 200;
+  width: 60%;
+  letter-spacing: 0.5px;
 }
 
-#avatarFormContainer {
+#updateBtn {
+  margin-left: 20px;
+}
+
+#editContainer {
   display: none;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100vh;
   width: 100vw;
-}
-
-#screenOverlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+#screenOverlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 2;
 }
 
-#avatarForm {
-  position: relative;
-  display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
-  height: 60vh;
-  width: 40vw;
-  min-width: 300px;
-  z-index: 3;
+#updateForm {
+  height: 70vh;
+  width: 90vw;
+  max-width: 600px;
   background-color: #fff;
+  z-index: 3;
 }
 
-#avatarPreview {
+#avatarContainer {
+  height: 30%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
-#avatarPreview > img {
-  max-height: 70%;
-  max-width: 60%;
-}
-
-#updateButtons {
-  text-align: center;
-}
-
-#updateButtons > label,
-#updateButtons > button {
-  background-color: #e0e0e0;
-  border: none;
-  font-size: 1em;
-  margin: 10px 4vw;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-#updateButtons > input {
-  display: none;
-}
-
-#submitButtons {
+#avatarFrame {
+  position: relative;
+  height: 80%;
+  width: 40%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-#submitButtons > button {
-  border: none;
-  font-size: 1em;
-  margin: 10px;
-  padding: 6px 12px;
+  justify-content: center;
   cursor: pointer;
-  color: #fff;
 }
 
-#avatarFormCancel {
+#editIcon {
+  position: absolute;
+  top: -8%;
+  right: -8%;
+  height: 27px;
+  width: 27px;
+  padding: 4px;
+  border-radius: 50%;
   background-color: #222222;
 }
 
-#avatarFormSave {
-  background-color: #1e8b1e;
+#avatarFrame > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #profileHeading h1 {
+    font-size: 22px;
+  }
+
+  #profileHeading h2 {
+    font-size: 13px;
+  }
+
+  #profileHeading p {
+    font-size: 12px;
+  }
+
+  #userSummary {
+    width: 100%;
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  #updateBtn {
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  #editIcon {
+    height: 23px;
+    width: 23px;
+  }
 }

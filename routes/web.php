@@ -21,6 +21,7 @@ Route::get('/', [WelcomeController::class, 'index']);
 Auth::routes();
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::post('/dashboard', [DashboardController::class, 'store']);
 
 Auth::routes();
 

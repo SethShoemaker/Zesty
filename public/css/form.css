@@ -1,19 +1,10 @@
-.container {
-  min-height: auto !important;
-  max-width: 620px !important;
-  font-family: "Outfit", sans-serif;
-}
-
-.container .formTitle {
-  font-size: 32px;
-  cursor: default;
-}
-
-.container input {
+.container input,
+.container textarea {
   border: 1px solid #222222 !important;
   border-radius: 0 !important;
   background-color: #f5f5f5;
   font-weight: 300 !important;
+  resize: none;
 }
 
 .container input:focus,
@@ -24,6 +15,10 @@
   border: inherit;
 }
 
+.container button:focus {
+  box-shadow: none;
+}
+
 .container .is-invalid,
 .container .is-invalid:focus {
   box-shadow: none !important;
@@ -32,12 +27,13 @@
 
 .container .btn {
   margin-left: 0 12px;
-  padding: 0.6vh 1.9vw;
+  padding: 0.8vh 2.2vw;
   border: none !important;
   border-radius: 0 !important;
   color: #000;
   border: none;
   font-weight: 500;
+  letter-spacing: 0.7px;
 }
 
 .form-check-label,
@@ -53,20 +49,28 @@
   background-color: #1e8b1e !important;
 }
 
-.container .btn-secondary {
+.container .btn-link {
   background-color: #fff !important;
   font-size: 0.95rem;
   color: #000;
 }
 
-.container .btn-secondary:hover {
+.container .btn-secondary {
+  background-color: #222222;
+  color: #fff;
+}
+
+.container .btn-link {
+  text-decoration: none;
+}
+
+.container .btn-link:hover {
   text-decoration: underline;
 }
 
 .container .btn-primary {
   background-color: #1e8b1e;
   color: #fff;
-  font-size: 1.1rem;
 }
 
 .container .btn-primary:hover {

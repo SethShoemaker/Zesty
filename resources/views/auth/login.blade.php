@@ -1,7 +1,8 @@
 @extends('layouts.app_layout')
 @section('title', "Login")
 @section('stylesheets')
-    <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
 @endsection
 @section('content')
 <div class="container">
@@ -44,7 +45,7 @@
         <div class="col-12 my-3 d-flex align-items-center flex-row-reverse">
             <button type="submit" class="btn btn-primary">Login</button>
             @if (Route::has('password.request'))
-                <a class="btn btn-secondary" href="{{ route('password.request') }}">
+                <a class="btn btn-link" href="{{ route('password.request') }}">
                     Forgot Your Password?
                 </a>
             @endif

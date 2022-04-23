@@ -1,5 +1,5 @@
 // Fonts
-@import "https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -65,7 +65,9 @@ nav{
     align-items: center;
 }
 #logo{
-    font-size: 2rem;
+    font-size: 2.3rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
     text-decoration: none;
     color:#fff;
 }
@@ -119,7 +121,8 @@ nav{
     margin-left:20px;
     color: #fff;
     text-decoration: none;
-    font-size:1.2rem;
+    font-size:1.1rem;
+    letter-spacing: 1px;
 }
 .dropdown-menu{
     border-radius: 0;
@@ -140,8 +143,8 @@ nav{
     font-size:1.2rem;
 }
 .container{
-    width:90vw;
-    padding:4vh 3vw;
+    width:89vw;
+    padding:4vh 5vw;
     margin: 5vh auto 10vh auto;
     background-color: #fff;
     min-height: 100vh;

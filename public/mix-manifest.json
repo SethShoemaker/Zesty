@@ -4,5 +4,6 @@
     "/css/main.css": "/css/main.css",
     "/css/mail.css": "/css/mail.css",
     "/css/dashboard.css": "/css/dashboard.css",
+    "/css/auth.css": "/css/auth.css",
     "/css/form.css": "/css/form.css"
 }

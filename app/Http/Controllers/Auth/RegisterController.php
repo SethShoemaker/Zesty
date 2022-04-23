@@ -73,7 +73,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'username' => $data['username'],
-            'avatar' => "default.jpg",
         ]);
 
         $user->notify(new welcome($data['name']));

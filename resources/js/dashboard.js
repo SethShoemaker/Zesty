@@ -1,28 +1,35 @@
 $(function(){
-    function showAvatarForm(){
-        $('#avatarFormContainer').css("display", "flex" );
+    function showUpdateForm(){
+        $('#editContainer').css("display", "flex" );       
+        $('#screenOverlay').show();
         $('body').css("overflow", "hidden" );
     }
     
     function hideAvatarForm(){
-        $('#avatarFormContainer').hide();
+        $('#editContainer').hide(); 
+        $('#screenOverlay').hide();
         $('body').css("overflow", "scroll" );
     }
 
-    $("#avatarFrame").on('click', function(){
-        showAvatarForm();
+    $("#updateBtn").on('click', function(){
+        showUpdateForm();
     })
 
     $("#screenOverlay").on('click', function(){
         hideAvatarForm();
     })
-    
-    $("#avatarFormHide").on('click', function(){
-        hideAvatarForm();
-    })
 
-    $("#avatarFormCancel").on('click', function(e){
+    $("#updateFormCancel").on('click', function(e){
         e.preventDefault();
         hideAvatarForm();
     })
+
+    $('#avatar').on('change', function(){
+        let file = this.files[0];
+        let reader = new FileReader();
+        reader.onload = function(event){
+            $('#avatarPreview').attr("src",event.target.result);
+        };
+        reader.readAsDataURL(file);
+    });
 })
