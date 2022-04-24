@@ -1,5 +1,6 @@
 .container input,
-.container textarea {
+.container textarea,
+.container select {
   border: 1px solid #222222 !important;
   border-radius: 0 !important;
   background-color: #f5f5f5;

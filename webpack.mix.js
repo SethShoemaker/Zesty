@@ -16,6 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/scss/main.scss', 'public/css')
     .sass('resources/scss/form.scss', 'public/css')
     .sass('resources/scss/auth.scss', 'public/css')
+    .sass('resources/scss/post.scss', 'public/css')
     .sass('resources/scss/mail.scss', 'public/css')
     .sass('resources/scss/dashboard.scss', 'public/css')
     .sourceMaps();

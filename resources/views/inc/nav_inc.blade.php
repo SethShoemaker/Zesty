@@ -44,6 +44,9 @@
                 
                     <ul class="dropdown-menu" aria-labelledby="navDropdownToggler">
                         <li>
+                            <a class="dropdown-item" href="{{ url('/post') }}">Post Recipe</a>
+                        </li>
+                        <li>
                             <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
                         </li>
                         <li>

@@ -2,7 +2,8 @@
 @import 'variables';
 
 .container input,
-.container textarea{
+.container textarea,
+.container select{
     border:1px solid $grey !important;
     border-radius: 0 !important;
     background-color: $offWhiteLight;
@@ -13,9 +14,9 @@
 .container input:focus,
 .container textarea:focus,
 .container select:focus {
-      box-shadow: none;
-      background-color: $offWhiteDark;
-      border:inherit;
+    box-shadow: none;
+    background-color: $offWhiteDark;
+    border:inherit;
 }
 
 .container button:focus{

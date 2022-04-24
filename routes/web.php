@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ Auth::routes();
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::post('/dashboard', [DashboardController::class, 'store']);
 
-Auth::routes();
+Route::get('/post', function () {
+    return view('post');
+})->middleware('auth');
+
+Route::post('/post', [PostController::class, 'store']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
