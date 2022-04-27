@@ -6,7 +6,7 @@
 @endsection
 @section('content')
 <div class="container">
-    <h1 class="formTitle mb-3">Login</h1>
+    <h1 class="mb-3">Login</h1>
     <form class='row' method="POST" action="{{ route('login') }}">
         @csrf
         <div class="col-12 my-3">

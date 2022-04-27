@@ -6,8 +6,8 @@
 @endsection
 @section('content')
 <div class="container">
-    <h1 class="formTitle mb-3">Register</h1>
-    <form class='row' action="{{ route('register') }}" method="POST">
+    <h1 class="mb-3">Register</h1>
+    <form action="{{ route('register') }}" method="POST">
         @csrf
         <div class="col-12 my-3">
             <label for="name">

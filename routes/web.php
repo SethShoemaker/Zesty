@@ -28,6 +28,4 @@ Route::get('/post', function () {
     return view('post');
 })->middleware('auth');
 
-Route::post('/post', [PostController::class, 'store']);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/post', [PostController::class, 'store'])->middleware('auth');

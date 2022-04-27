@@ -6,8 +6,8 @@
 @endsection
 @section('content')
 <div class="container">
-    <h1 class="formTitle mb-3">Reset Password</h1>
-    <form class='row' action="{{ route('password.update') }}" method="POST">
+    <h1 class="mb-3">Reset Password</h1>
+    <form action="{{ route('password.update') }}" method="POST">
         @csrf
 
         <input type="hidden" name="token" value="{{ $token }}">
