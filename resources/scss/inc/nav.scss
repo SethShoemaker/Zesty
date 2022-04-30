@@ -1,0 +1,122 @@
+// variables
+@import 'variables';
+
+nav{
+    margin:0;
+    padding: 0;;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey;
+    height:55px;
+    width:100vw;
+    z-index: 1;
+}
+#navContainer{
+    width:96vw;
+    height:55px;
+}
+@media screen and (min-width:768px) {
+    #navMobile{
+        display:none;
+    }
+    #navDesktop > #navContainer{
+        display:grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+@media screen and (max-width:768px) {
+    #navDesktop{
+        display:none;
+    }
+    #navMobile  > #navContainer{
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+#logoContainer, 
+#logo{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    font-size: 2.3rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-decoration: none;
+    color:#fff;
+}
+#logo > img{
+    height:35px;
+    padding-right:5px;
+}
+#searchContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#searchContainer > form{
+    display:grid;
+    grid-template-columns: auto 40px;
+    height:32px;
+    width:40vw;
+    max-width: 600px;
+    background-color: #fff;
+}
+#searchContainer > form > input{
+    border: none;
+    font-weight: 300;
+    color: $grey;
+}
+#searchContainer > form input:focus {
+    outline: none;
+    border:inherit !important;
+    border-radius:none !important;
+}
+#searchContainer > form > button{
+    width:40px;
+    height:32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: $zestyGreen;
+    border: none;
+}
+#searchContainer > form > button > img{
+    height:65%;
+}
+#authContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#authContainer > a,
+#authContainer > .dropdown > a{
+    margin-left:20px;
+    color: #fff;
+    text-decoration: none;
+    font-size:1.1rem;
+    letter-spacing: 1px;
+}
+.dropdown-menu{
+    border-radius: 0;
+    border: 1px solid $grey;
+}
+.dropdown-item:hover{
+    background-color: $offWhiteDark;
+}
+#iconContainer{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#iconContainer > a{
+    margin-left:20px;
+    color: #fff;
+    text-decoration: none;
+    font-size:1.2rem;
+}

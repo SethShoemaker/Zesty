@@ -3,7 +3,7 @@
         <div id="logoContainer">
             <a id='logo' href="{{ url('/') }}" role='logo'>
                 <img src='/images/ZestyIcon.svg'>
-                {{ config('app.name') }}
+                Zesty
             </a>
         </div>
         <div id="iconContainer">
@@ -17,7 +17,7 @@
         <div id="logoContainer">
             <a id='logo' href="{{ url('/') }}" role='logo'>
                 <img src='/images/ZestyIcon.svg'>
-                {{ config('app.name') }}
+                Zesty
             </a>
         </div>
         <div id="searchContainer">
@@ -44,7 +44,7 @@
                 
                     <ul class="dropdown-menu" aria-labelledby="navDropdownToggler">
                         <li>
-                            <a class="dropdown-item" href="{{ url('/post') }}">Post Recipe</a>
+                            <a class="dropdown-item" href="{{ url('/post/recipe') }}">Post Recipe</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>

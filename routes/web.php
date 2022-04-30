@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\RecipesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +16,26 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'index']);
+// Index
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 Auth::routes();
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::post('/dashboard', [DashboardController::class, 'store']);
 
-Route::get('/post', function () {
-    return view('post');
+// Dashboard routes
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+Route::post('/dashboard', [DashboardController::class, 'update']);
+
+
+// Recipe routes
+Route::get('/recipe/{id}', [RecipesController::class, 'show']);
+
+Route::get('/post/recipe', function () {
+    return view('recipes.create');
 })->middleware('auth');
 
-Route::post('/post', [PostController::class, 'store'])->middleware('auth');
+Route::post('/post/recipe', [RecipesController::class, 'create'])->middleware('auth');

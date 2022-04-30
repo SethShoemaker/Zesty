@@ -1,0 +1,15 @@
+// variables
+@import '../inc/variables.scss';
+
+// Form Styles
+@import '../inc/form.scss';
+
+.container{
+    width:89vw;
+    min-height: auto;
+    max-width:620px;
+    background-color: #fff;
+    border: 2px solid $grey;
+    padding:3vh 3vw;
+    margin-top:calc(55px + 1vh);
+}

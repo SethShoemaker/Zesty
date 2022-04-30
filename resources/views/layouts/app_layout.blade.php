@@ -9,9 +9,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-   
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     @yield('stylesheets')
@@ -19,9 +16,10 @@
 <body>
     @include('inc.nav_inc')
     <main>
-        @yield('content')
+        <div class="outer-container">
+            @yield('content')
+        </div>
     </main>    
 </body>
 @include('inc.footer_inc')
-@yield('scripts')
 </html>

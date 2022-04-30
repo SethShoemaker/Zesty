@@ -11,13 +11,29 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/dashboard.js', 'public/js')
-    .js('resources/js/post.js', 'public/js')
+mix 
+    // Universal files
+    .js('resources/js/app.js', 'public/js')
     .sass('resources/scss/main.scss', 'public/css')
-    .sass('resources/scss/form.scss', 'public/css')
-    .sass('resources/scss/auth.scss', 'public/css')
-    .sass('resources/scss/post.scss', 'public/css')
-    .sass('resources/scss/mail.scss', 'public/css')
-    .sass('resources/scss/dashboard.scss', 'public/css')
+
+
+    // Auth
+    .sass('resources/scss/auth/auth.scss', 'public/css/auth')
+
+
+    // Recipes
+    .sass('resources/scss/recipes/create.scss', 'public/css/recipes')
+    .sass('resources/scss/recipes/show.scss', 'public/css/recipes')
+    .js('resources/js/recipes/create.js', 'public/js/recipes')
+
+
+    // Welcome
+    .sass('resources/scss/welcome/welcome.scss', 'public/css/welcome')
+
+
+    // Dashboard
+    .sass('resources/scss/dashboard/dashboard.scss', 'public/css/dashboard')
+    .js('resources/js/dashboard/dashboard.js', 'public/js/dashboard')
+
+
     .sourceMaps();

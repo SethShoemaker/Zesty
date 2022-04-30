@@ -25,7 +25,6 @@ class User extends Authenticatable
         'avatar',
         'password',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -54,5 +53,17 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new customPasswordReset($token));
+    }
+
+
+    /**
+     * User has many posts.
+     *
+     * 
+     */
+
+    public function recipes()
+    {
+        return $this->hasMany('App\Models\Recipe');
     }
 }

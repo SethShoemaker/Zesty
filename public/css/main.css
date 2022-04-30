@@ -11298,12 +11298,6 @@ body::-webkit-scrollbar {
   /* for Chrome, Safari, and Opera */
 }
 
-main {
-  background-color: #f5f5f5;
-  padding: 7vh 0;
-  min-height: 100vh;
-}
-
 nav {
   margin: 0;
   padding: 0;
@@ -11442,10 +11436,13 @@ nav {
   font-size: 1.2rem;
 }
 
-.container {
-  width: 89vw;
-  padding: 4vh 5vw;
-  margin: 5vh auto 10vh auto;
-  background-color: #fff;
+main {
+  background-color: #f5f5f5;
+  padding: 55px 0;
+  min-height: 100vh;
+}
+
+.outer-container {
+  width: 100vw;
   min-height: 100vh;
 }

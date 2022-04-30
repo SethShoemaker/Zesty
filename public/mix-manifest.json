@@ -1,11 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
-    "/js/dashboard.js": "/js/dashboard.js",
-    "/js/post.js": "/js/post.js",
+    "/js/recipes/create.js": "/js/recipes/create.js",
+    "/js/dashboard/dashboard.js": "/js/dashboard/dashboard.js",
     "/css/main.css": "/css/main.css",
-    "/css/mail.css": "/css/mail.css",
-    "/css/post.css": "/css/post.css",
-    "/css/auth.css": "/css/auth.css",
-    "/css/form.css": "/css/form.css",
-    "/css/dashboard.css": "/css/dashboard.css"
+    "/css/dashboard/dashboard.css": "/css/dashboard/dashboard.css",
+    "/css/welcome/welcome.css": "/css/welcome/welcome.css",
+    "/css/recipes/create.css": "/css/recipes/create.css",
+    "/css/auth/auth.css": "/css/auth/auth.css"
 }

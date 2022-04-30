@@ -1,9 +1,9 @@
 // variables
-@import 'variables';
+@import 'variables.scss';
 
-.container input,
-.container textarea,
-.container select{
+.outer-container input,
+.outer-container textarea,
+.outer-container select{
     border:1px solid $grey !important;
     border-radius: 0 !important;
     background-color: $offWhiteLight;
@@ -11,27 +11,26 @@
     resize: none;
 }
 
-.container input:focus,
-.container textarea:focus,
-.container select:focus {
+.outer-container input:focus,
+.outer-container textarea:focus,
+.outer-container select:focus {
     box-shadow: none;
     background-color: $offWhiteDark;
     border:inherit;
 }
 
-.container button:focus{
+.outer-container button:focus{
     box-shadow: none;
 }
 
-.container .is-invalid,
-.container .is-invalid:focus{
+.outer-container .is-invalid,
+.outer-container .is-invalid:focus{
     box-shadow: none !important;
     border-color:#dc3545 !important;
 }
 
-.container .btn{
+.outer-container .btn{
     margin-left:0 12px;
-    padding: 0.8vh auto;
     border: none !important;
     border-radius: 0 !important;
     color: #000;
@@ -40,43 +39,43 @@
     letter-spacing: 0.7px;
 }
 
-.form-check-label,
-.form-check-input{
+.outer-container .form-check-label,
+.outer-container .form-check-input{
     cursor: pointer;
 }
 
-.form-check-input{
+.outer-container .form-check-input{
     background-color: $offWhiteLight !important;
 }
 
-.form-check-input:checked{
+.outer-container .form-check-input:checked{
     background-color: $zestyGreen !important;
 }
 
-.container .btn-link{
+.outer-container .btn-link{
     background-color: #fff !important;
     font-size:0.95rem;
     color:#000;
 }
 
-.container .btn-secondary{
+.outer-container .btn-secondary{
     background-color: $grey;
     color:#fff;
 }
 
-.container .btn-link{
+.outer-container .btn-link{
     text-decoration: none;
 }
 
-.container .btn-link:hover{
+.outer-container .btn-link:hover{
     text-decoration: underline;
 }
 
-.container .btn-primary {
+.outer-container .btn-primary {
     background-color: #1e8b1e;
     color: #fff;
 }
 
-.container .btn-primary:hover {
+.outer-container .btn-primary:hover {
     background-color: $zestyGreen;
 }

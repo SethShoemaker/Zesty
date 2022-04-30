@@ -1,0 +1,49 @@
+// variables
+@import 'variables.scss';
+
+#recipes{
+    margin-top:10vh;
+    display: flex;
+}
+
+.recipe-card{
+    width:25%;
+    display:grid;
+    grid-template-rows: 10vw 100px;
+    border:2px solid $grey;
+    background-color: #fff;
+    margin:1%;
+    text-decoration: none;
+    color:$grey;
+}
+
+.recipe-card:hover{
+    text-decoration: none;
+    color:$grey;
+}
+
+.recipe-card > .recipe-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-card > .recipe-image > img{
+    max-height: 80%;
+    max-width:80%;
+}
+
+.recipe-details{
+    background-color: #fff;
+    width:100%;
+}
+
+.recipe-details > span{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.recipe-details > p{
+    border-top:2px solid $grey;
+    font-size: 0.9rem;
+}

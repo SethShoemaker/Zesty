@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Recipe;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 class DashboardController extends Controller
@@ -19,42 +20,43 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view(
-            'dashboard',
-            [
-                "avatar" => Auth::user()->avatar,
-                "username" => Auth::user()->username,
-                "name" => Auth::user()->name,
-                "created" => Auth::user()->created_at->format('m/d/Y'),
-                "bio" => Auth::user()->bio,
-            ]
-        );
-    }
+
+
 
     /**
-     * Update user record.
+     * Show user dashboard.
      *
      * 
      */
 
-    public function store(Request $request)
+    public function index()
+    {
+        $user_id = Auth::user()->id;
+        $user = User::find($user_id);
+        return view('dashboard')->with('recipes', $user->recipes);
+    }
+
+
+
+
+    /**
+     * Update user record
+     *
+     * 
+     */
+
+    public function update(Request $request)
     {
         $request->validate([
-            'avatar' => 'mimes:png,jpg,jpeg,svg|max:5048',
-            'name' => 'string|max:50',
-            'bio' => 'max:350'
+            'avatar' => ['mimes:png,jpg,jpeg,svg', 'max:5048'],
+            'name' => ['string', 'max:50'],
+            'bio' => ['string', 'max:350']
         ]);
 
-        $id = Auth::user()->id;
-        $user = User::find($id);
+        $user_id = Auth::user()->id;
+        $user = User::find($user_id);
 
+        // Saves image in storage and DB if entered
         if (!empty($request->file('avatar'))) {
 
             // Creates file name to be stored
@@ -62,10 +64,8 @@ class DashboardController extends Controller
             $fileMime = $request->file('avatar')->extension();
             $avatarStoreName = $username . "." . $fileMime;
 
-            // Stores avatar file
             $request->file('avatar')->storeAs('public/avatars', $avatarStoreName);
 
-            // Save avatar file name
             $user->avatar = $avatarStoreName;
         }
 

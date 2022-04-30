@@ -1,14 +1,24 @@
 // variables
-@import 'variables';
+@import '../inc/variables.scss';
+
+// Form styles
+@import "../inc/form.scss";
 
 .container{
+    width:89vw;
     min-height: auto;
     max-width:740px;
+    background-color: #fff;
+    border: 2px solid $grey;
+    padding:3vh 3vw;
+    margin-top:60px;
 }
 
 .form-section{
-    margin-top:8vh;
-    margin-bottom:12vh;
+    margin-top:9vh;
+}
+.form-section:first-of-type{
+    margin-top:4vh;
 }
 
 #imageFrame {
