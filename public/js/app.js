@@ -1005,6 +1005,17 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 
 /***/ }),
 
+/***/ "./resources/scss/dashboard/dashboard.scss":
+/*!*************************************************!*\
+  !*** ./resources/scss/dashboard/dashboard.scss ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy9kYXNoYm9hcmQvZGFzaGJvYXJkLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Njc3MvZGFzaGJvYXJkL2Rhc2hib2FyZC5zY3NzP2ZiNzciXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/scss/dashboard/dashboard.scss\n");
+
+/***/ }),
+
 /***/ "./resources/scss/main.scss":
 /*!**********************************!*\
   !*** ./resources/scss/main.scss ***!
@@ -1038,6 +1049,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./resources/scss/recipes/show.scss":
+/*!******************************************!*\
+  !*** ./resources/scss/recipes/show.scss ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy9yZWNpcGVzL3Nob3cuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Nzcy9yZWNpcGVzL3Nob3cuc2Nzcz8zY2VmIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/scss/recipes/show.scss\n");
+
+/***/ }),
+
 /***/ "./resources/scss/welcome/welcome.scss":
 /*!*********************************************!*\
   !*** ./resources/scss/welcome/welcome.scss ***!
@@ -1045,18 +1067,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy93ZWxjb21lL3dlbGNvbWUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Nzcy93ZWxjb21lL3dlbGNvbWUuc2Nzcz8xNzlkIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/scss/welcome/welcome.scss\n");
-
-/***/ }),
-
-/***/ "./resources/scss/dashboard/dashboard.scss":
-/*!*************************************************!*\
-  !*** ./resources/scss/dashboard/dashboard.scss ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy9kYXNoYm9hcmQvZGFzaGJvYXJkLnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Njc3MvZGFzaGJvYXJkL2Rhc2hib2FyZC5zY3NzP2UxNzAiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/scss/dashboard/dashboard.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Nzcy93ZWxjb21lL3dlbGNvbWUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvc2Nzcy93ZWxjb21lL3dlbGNvbWUuc2Nzcz81ZWQ0Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/scss/welcome/welcome.scss\n");
 
 /***/ }),
 
@@ -1194,10 +1205,11 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
 /******/ 			"css/main": 0,
-/******/ 			"css/dashboard/dashboard": 0,
 /******/ 			"css/welcome/welcome": 0,
+/******/ 			"css/recipes/show": 0,
 /******/ 			"css/recipes/create": 0,
-/******/ 			"css/auth/auth": 0
+/******/ 			"css/auth/auth": 0,
+/******/ 			"css/dashboard/dashboard": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1247,12 +1259,13 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/dashboard/dashboard","css/welcome/welcome","css/recipes/create","css/auth/auth"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/dashboard/dashboard","css/welcome/welcome","css/recipes/create","css/auth/auth"], () => (__webpack_require__("./resources/scss/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/dashboard/dashboard","css/welcome/welcome","css/recipes/create","css/auth/auth"], () => (__webpack_require__("./resources/scss/auth/auth.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/dashboard/dashboard","css/welcome/welcome","css/recipes/create","css/auth/auth"], () => (__webpack_require__("./resources/scss/recipes/create.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/dashboard/dashboard","css/welcome/welcome","css/recipes/create","css/auth/auth"], () => (__webpack_require__("./resources/scss/welcome/welcome.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/dashboard/dashboard","css/welcome/welcome","css/recipes/create","css/auth/auth"], () => (__webpack_require__("./resources/scss/dashboard/dashboard.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/welcome/welcome","css/recipes/show","css/recipes/create","css/auth/auth","css/dashboard/dashboard"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/welcome/welcome","css/recipes/show","css/recipes/create","css/auth/auth","css/dashboard/dashboard"], () => (__webpack_require__("./resources/scss/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/welcome/welcome","css/recipes/show","css/recipes/create","css/auth/auth","css/dashboard/dashboard"], () => (__webpack_require__("./resources/scss/auth/auth.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/welcome/welcome","css/recipes/show","css/recipes/create","css/auth/auth","css/dashboard/dashboard"], () => (__webpack_require__("./resources/scss/recipes/create.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/welcome/welcome","css/recipes/show","css/recipes/create","css/auth/auth","css/dashboard/dashboard"], () => (__webpack_require__("./resources/scss/recipes/show.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main","css/welcome/welcome","css/recipes/show","css/recipes/create","css/auth/auth","css/dashboard/dashboard"], () => (__webpack_require__("./resources/scss/welcome/welcome.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/welcome/welcome","css/recipes/show","css/recipes/create","css/auth/auth","css/dashboard/dashboard"], () => (__webpack_require__("./resources/scss/dashboard/dashboard.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

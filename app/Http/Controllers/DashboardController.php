@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Recipe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -48,7 +47,7 @@ class DashboardController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'avatar' => ['mimes:png,jpg,jpeg,svg', 'max:5048'],
+            'avatar' => ['mimes:png,jpg,jpeg', 'max:5048'],
             'name' => ['string', 'max:50'],
             'bio' => ['string', 'max:350']
         ]);

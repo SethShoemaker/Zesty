@@ -3,8 +3,9 @@
     "/js/recipes/create.js": "/js/recipes/create.js",
     "/js/dashboard/dashboard.js": "/js/dashboard/dashboard.js",
     "/css/main.css": "/css/main.css",
-    "/css/dashboard/dashboard.css": "/css/dashboard/dashboard.css",
     "/css/welcome/welcome.css": "/css/welcome/welcome.css",
+    "/css/recipes/show.css": "/css/recipes/show.css",
     "/css/recipes/create.css": "/css/recipes/create.css",
-    "/css/auth/auth.css": "/css/auth/auth.css"
+    "/css/auth/auth.css": "/css/auth/auth.css",
+    "/css/dashboard/dashboard.css": "/css/dashboard/dashboard.css"
 }

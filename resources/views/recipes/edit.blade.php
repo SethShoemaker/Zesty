@@ -5,9 +5,10 @@
 @endsection
 @section('content')
     <div class="container">
-        <h1 class="mb-3">Post Recipe</h1>
-        <form action="{{ url('/recipes') }}" method="post" enctype='multipart/form-data'>
+        <h1 class="mb-3">Edit Recipe</h1>
+        <form action="{{ url('/recipes/' . $recipe->id) }}" method="POST" enctype='multipart/form-data'>
             @csrf
+            @method('put')
             <div class="row form-section">
                 <h2 class='h4'>General Information</h2>
                 <div class="col-12 my-3">
@@ -15,7 +16,7 @@
                         Recipe Title
                     </label>
 
-                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}"  required autofocus>
+                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') ?? $recipe->title }}"  autofocus>
 
                     @error('title')
                         <span class="invalid-feedback" role="alert">
@@ -28,8 +29,8 @@
                         Servings
                     </label>
 
-                    <select name="servings" id="servings" class='form-control form-select' value="{{ old('servings') }}" required>
-                        <option></option>
+                    <select name="servings" id="servings" class='form-control form-select' required>
+                        {{-- If ( old servings is not set and previous servings is equal to option ) or ( old servings is equal to option ) select that option --}}
                         <option @if (old('servings') == 1) selected @endif value=1>1 Serving</option>
                         <option @if (old('servings') == 2) selected @endif value=2>2 Servings</option>
                         <option @if (old('servings') == 3) selected @endif value=3>3 Servings</option>
@@ -59,7 +60,7 @@
                         Description
                     </label>
 
-                    <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="3" required>{{ old('description') }}</textarea>
+                    <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="3" required>{{ old('description') ?? $recipe->description }}</textarea>
 
                         @error('description')
                             <span class="invalid-feedback" role="alert">
@@ -73,7 +74,7 @@
                     </label>
 
                     <label for='image' id='imageFrame' @error('image') class='is-invalid' @enderror>
-                        <img src='/storage/recipes/default.svg' id='imagePreview'>
+                        <img src='{{ url('/storage/recipes/' . $recipe->image) }}' id='imagePreview'>
                     </label>
 
                     <input type="file" accept="image/jpg, image/jpeg, image/png" class="d-none @error('image') is-invalid @enderror" value="{{ old('image') }}" name="image" id='image'>
@@ -111,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-12 mb-5 mt-2">
-                    <input type='text' id='ingredientsJSON' name='ingredientsJSON' value="{{ old('ingredientsJSON') }}" readonly class='d-none'>
+                    <input type='text' id='ingredientsJSON' name='ingredientsJSON' value="{{ old('ingredientsJSON') ?? $recipe->ingredients }}" readonly class='d-none'>
                     
                     <ul id='ingredientsList' class='list-group my-2 fs-4'>
                     </ul>
@@ -124,7 +125,7 @@
                         Instructions
                     </label>
 
-                    <textarea name="instructions" id="instructions" class="form-control @error('instructions') is-invalid @enderror" rows="10" required>{{ old('instructions') }}</textarea>
+                    <textarea name="instructions" id="instructions" class="form-control @error('instructions') is-invalid @enderror" rows="10" required>{{ old('instructions') ?? $recipe->instructions }}</textarea>
 
                     @error('instructions')
                         <span class="invalid-feedback" role="alert">
@@ -134,7 +135,7 @@
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-end align-items-center mt-2">
-                <button type='submit' class='btn btn-primary'>Post Recipe</button>
+                <button type='submit' class='btn btn-primary'>Update Recipe</button>
             </div>
         </form>
     </div>

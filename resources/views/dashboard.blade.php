@@ -32,7 +32,7 @@
                     <img id='editIcon' src='/images/iconEdit.svg'>
                     <img id='avatarPreview' src="{{ asset('/storage/avatars/' . Auth::user()->avatar) }}">
                 </label>
-                <input type="file" accept="image/jpg, image/jpeg, image/png, image/svg" name="avatar" class='d-none' id="avatar">
+                <input type="file" accept="image/jpg, image/jpeg, image/png" name="avatar" class='d-none' id="avatar">
             </div>
             <div class="col-12">
                 <label for="name">
@@ -68,21 +68,27 @@
             </div>
         </form>
     </div>
-    <div class="container">
-        <section id='recipes'>
-            @foreach ($recipes as $recipe)
-                <a class="recipe-card" href='{{ url('/recipe/' . $recipe->id) }}'>
-                    <div class="recipe-image">
-                        <img src='{{ asset('/storage/recipes/' . $recipe->image) }}'>
-                    </div>
-                    <div class="recipe-details">
-                        <span>{{ $recipe->title }}</span>
-                        <p>{{ Str::limit($recipe->description, 50) }}</p>
-                    </div>
-                </a>
+    <section id='recipes'>
+        <div class="container">
+            <h2 class='h1'>My Recipes</h2>
+            <ul id="recipes-list">
+                @foreach ($recipes as $recipe)
+                <li class="recipe-card">
+                    <a href='{{ url('/recipes/' . $recipe->id) }}'>
+                        <div class="recipe-image">
+                            <img src='{{ asset('/storage/recipes/' . $recipe->image) }}'>
+                        </div>
+                        <div class="recipe-details">
+                            <span>{{ $recipe->title }}</span>
+                            <p>{{ Str::limit($recipe->description, 50) }}</p>
+                        </div>
+                    </a>
+                </li>
+                
             @endforeach
-        </section>
-    </div>
+            </ul>
+        </div> 
+    </section>
 @endsection
 @section('scripts')
     <script src='/js/dashboard/dashboard.js'></script>

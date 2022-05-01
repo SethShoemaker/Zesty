@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\RecipesController;
+use App\Http\Controllers\RecipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +32,4 @@ Route::post('/dashboard', [DashboardController::class, 'update']);
 
 
 // Recipe routes
-Route::get('/recipe/{id}', [RecipesController::class, 'show']);
-
-Route::get('/post/recipe', function () {
-    return view('recipes.create');
-})->middleware('auth');
-
-Route::post('/post/recipe', [RecipesController::class, 'create'])->middleware('auth');
+Route::resource('recipes', RecipeController::class);
