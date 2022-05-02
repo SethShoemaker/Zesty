@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Recipe;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -30,9 +31,9 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $user_id = Auth::user()->id;
-        $user = User::find($user_id);
-        return view('dashboard')->with('recipes', $user->recipes);
+        $user_id = Auth::id();
+        $recipes = Recipe::where('user_id', $user_id)->paginate(20);
+        return view('dashboard')->with('recipes', $recipes);
     }
 
 

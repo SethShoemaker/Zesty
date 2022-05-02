@@ -16,7 +16,7 @@
                         Recipe Title
                     </label>
 
-                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') ?? $recipe->title }}"  autofocus>
+                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" maxLength='30' value="{{ old('title') ?? $recipe->title }}"  autofocus>
 
                     @error('title')
                         <span class="invalid-feedback" role="alert">
@@ -30,23 +30,22 @@
                     </label>
 
                     <select name="servings" id="servings" class='form-control form-select' required>
-                        {{-- If ( old servings is not set and previous servings is equal to option ) or ( old servings is equal to option ) select that option --}}
-                        <option @if (old('servings') == 1) selected @endif value=1>1 Serving</option>
-                        <option @if (old('servings') == 2) selected @endif value=2>2 Servings</option>
-                        <option @if (old('servings') == 3) selected @endif value=3>3 Servings</option>
-                        <option @if (old('servings') == 4) selected @endif value=4>4 Servings</option>
-                        <option @if (old('servings') == 5) selected @endif value=5>5 Servings</option>
-                        <option @if (old('servings') == 6) selected @endif value=6>6 Servings</option>
-                        <option @if (old('servings') == 7) selected @endif value=7>7 Servings</option>
-                        <option @if (old('servings') == 8) selected @endif value=8>8 Servings</option>
-                        <option @if (old('servings') == 9) selected @endif value=9>9 Servings</option>
-                        <option @if (old('servings') == 10) selected @endif value=10>10 Servings</option>
-                        <option @if (old('servings') == 11) selected @endif value=11>11 Servings</option>
-                        <option @if (old('servings') == 12) selected @endif value=12>12 Servings</option>
-                        <option @if (old('servings') == 13) selected @endif value=13>13 Servings</option>
-                        <option @if (old('servings') == 14) selected @endif value=14>14 Servings</option>
-                        <option @if (old('servings') == 15) selected @endif value=15>15 Servings</option>
-                        <option @if (old('servings') == 16) selected @endif value=16>16 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 1) selected @endif value=1>1 Serving</option>
+                        <option @if (old('servings') ?? $recipe->servings == 2) selected @endif value=2>2 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 3) selected @endif value=3>3 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 4) selected @endif value=4>4 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 5) selected @endif value=5>5 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 6) selected @endif value=6>6 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 7) selected @endif value=7>7 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 8) selected @endif value=8>8 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 9) selected @endif value=9>9 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 10) selected @endif value=10>10 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 11) selected @endif value=11>11 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 12) selected @endif value=12>12 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 13) selected @endif value=13>13 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 14) selected @endif value=14>14 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 15) selected @endif value=15>15 Servings</option>
+                        <option @if (old('servings') ?? $recipe->servings == 16) selected @endif value=16>16 Servings</option>
                     </select>
 
                     @error('servings')

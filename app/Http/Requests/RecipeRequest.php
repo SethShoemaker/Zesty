@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Recipe;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,7 @@ class RecipeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class RecipeRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => ['required', 'string', 'max:50'],
+            'title' => ['required', 'string', 'max:30'],
             'servings' => ['required', 'numeric'],
             'description' => ['required', 'string', 'max:350'],
             'image' => ['mimes:jpg,jpeg,png', 'max:5048'],

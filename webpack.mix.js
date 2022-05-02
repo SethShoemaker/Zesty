@@ -11,7 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
+ mix.webpackConfig({
+    stats: {
+        children: true
+    }
+});
+
 mix 
+
     // Universal files
     .js('resources/js/app.js', 'public/js')
     .sass('resources/scss/main.scss', 'public/css')

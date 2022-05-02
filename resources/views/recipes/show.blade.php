@@ -6,6 +6,12 @@
 @section('content')
     <div class="container">
         {{ $recipe->title }}
+        {{ $recipe->description }}
+        {{ $recipe->user_id }}
+        {{ $recipe->servings }}
+        {{ $recipe->ingredients }}
+        {{ $recipe->instructions }}
+        <img src='{{ url('/storage/recipes/' . $recipe->image) }}'>
         @if ($recipe->user_id === Auth::id())
                 <a href='{{ url('/recipes/' . $recipe->id . "/edit") }}' class='btn btn-primary'>Edit</a>
         @endif

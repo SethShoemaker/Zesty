@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Recipe\RecipeRequest;
+use App\Http\Requests\RecipeRequest;
 use App\Models\Recipe;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
-class RecipeController extends Controller
+class RecipesController extends Controller
 {
 
     /**

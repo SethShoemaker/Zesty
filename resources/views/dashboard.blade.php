@@ -73,20 +73,17 @@
             <h2 class='h1'>My Recipes</h2>
             <ul id="recipes-list">
                 @foreach ($recipes as $recipe)
-                <li class="recipe-card">
-                    <a href='{{ url('/recipes/' . $recipe->id) }}'>
-                        <div class="recipe-image">
-                            <img src='{{ asset('/storage/recipes/' . $recipe->image) }}'>
-                        </div>
-                        <div class="recipe-details">
-                            <span>{{ $recipe->title }}</span>
-                            <p>{{ Str::limit($recipe->description, 50) }}</p>
-                        </div>
-                    </a>
-                </li>
-                
-            @endforeach
+                    <li class="recipe-card">
+                        <a href='{{ url('/recipes/' . $recipe->id) }}'>
+                            <div class="recipe-image" style="background-image: url({{ asset('/storage/recipes/' . $recipe->image) }})"></div>
+                            <div class="recipe-title">
+                                <h3>{{ $recipe->title }}</h3>
+                            </div>
+                        </a>
+                    </li>
+                @endforeach
             </ul>
+            {{ $recipes->links() }}
         </div> 
     </section>
 @endsection

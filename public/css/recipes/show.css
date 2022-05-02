@@ -1,7 +1,7 @@
 .outer-container input,
 .outer-container textarea,
 .outer-container select {
-  border: 1px solid #222222 !important;
+  border: 1.5px solid #222222 !important;
   border-radius: 0 !important;
   background-color: #f5f5f5;
   font-weight: 300 !important;
