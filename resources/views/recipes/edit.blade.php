@@ -6,6 +6,7 @@
 @section('content')
     <div class="container">
         <h1 class="mb-3">Edit Recipe</h1>
+        <p>* indicates field is required</p>
         <form action="{{ url('/recipes/' . $recipe->id) }}" method="POST" enctype='multipart/form-data'>
             @csrf
             @method('put')
@@ -13,10 +14,10 @@
                 <h2 class='h4'>General Information</h2>
                 <div class="col-12 my-3">
                     <label for="title">
-                        Recipe Title
+                        Recipe Title*
                     </label>
 
-                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" maxLength='30' value="{{ old('title') ?? $recipe->title }}"  autofocus>
+                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" maxLength='30' value="{{ old('title') ?? $recipe->title }}" required autofocus>
 
                     @error('title')
                         <span class="invalid-feedback" role="alert">
@@ -29,7 +30,8 @@
                         Servings
                     </label>
 
-                    <select name="servings" id="servings" class='form-control form-select' required>
+                    <select name="servings" id="servings" class='form-control form-select'>
+                        <option></option>
                         <option @if (old('servings') ?? $recipe->servings == 1) selected @endif value=1>1 Serving</option>
                         <option @if (old('servings') ?? $recipe->servings == 2) selected @endif value=2>2 Servings</option>
                         <option @if (old('servings') ?? $recipe->servings == 3) selected @endif value=3>3 Servings</option>
@@ -59,7 +61,7 @@
                         Description
                     </label>
 
-                    <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="3" required>{{ old('description') ?? $recipe->description }}</textarea>
+                    <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" rows="3">{{ old('description') ?? $recipe->description }}</textarea>
 
                         @error('description')
                             <span class="invalid-feedback" role="alert">
@@ -86,36 +88,28 @@
                 </div>
             </div>
             <div class="form-section">
-                <h2 class='h4'>Ingredients</h2>
+                <h2 class='h5'>Ingredients</h2>
                 <div class="row my-3">
-                    <div class="col-4 col-md-3">
-                        <label for="ingredientQuantity">Quantity</label>
-
-                        <input type="text" id="ingredientQuantity" class='form-control ingredientInput' oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
-                        
-                        <div class="ingredientQuantity-feedback">
-                            <span class='form-text'>Ex: 2</span>
-                        </div>
-                    </div>
-                    <div class="col-8 col-md-7">
-                        <label for="ingredientName">Ingredient</label>
+                    <div class="col-8 col-md-10">
+                        <label for="ingredientName">Ingredient*</label>
 
                         <input id='ingredientName' class="form-control ingredientInput" type="text">
-
-                        <div class="ingredientName-feedback">
-                            <span class='form-text'>Ex: Cups Milk</span>
-                        </div>
                     </div>
-                    <div class="col-12 col-md-2">
+                    <div class="col-4 col-md-2">
                         <input value='Add' id='addIngredient' class='btn btn-primary form-control ingredientInput mt-4' type='button'>
                     </div>
                 </div>
                 <div class="col-12 mb-5 mt-2">
-                    <input type='text' id='ingredientsJSON' name='ingredientsJSON' value="{{ old('ingredientsJSON') ?? $recipe->ingredients }}" readonly class='d-none'>
+                    <input type='text' id='ingredients' name='ingredients' value="{{ old('ingredients') ?? $recipe->ingredients }}" readonly class='d-none'>
                     
                     <ul id='ingredientsList' class='list-group my-2 fs-4'>
                     </ul>
                 </div>
+                @error('ingredients')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
             </div>
             <div class="row form-section">
                 <h2 class='h4'>Instructions</h2>
@@ -124,7 +118,7 @@
                         Instructions
                     </label>
 
-                    <textarea name="instructions" id="instructions" class="form-control @error('instructions') is-invalid @enderror" rows="10" required>{{ old('instructions') ?? $recipe->instructions }}</textarea>
+                    <textarea name="instructions" id="instructions" class="form-control @error('instructions') is-invalid @enderror" rows="10">{{ old('instructions') ?? $recipe->instructions }}</textarea>
 
                     @error('instructions')
                         <span class="invalid-feedback" role="alert">

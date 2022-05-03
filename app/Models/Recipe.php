@@ -24,7 +24,6 @@ class Recipe extends Model
         'instructions',
     ];
 
-
     /**
      * Post belongs to user.
      *

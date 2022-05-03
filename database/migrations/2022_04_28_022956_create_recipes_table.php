@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->mediumText('description');
+            $table->mediumText('description')->nullable();
             $table->foreignId('user_id');
-            $table->tinyInteger('servings');
+            $table->tinyInteger('servings')->nullable();
             $table->string('image')->default('default.svg');
             $table->json('ingredients');
-            $table->mediumText('instructions');
+            $table->mediumText('instructions')->nullable();
             $table->timestamps();
         });
     }

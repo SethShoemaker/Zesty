@@ -1,14 +1,15 @@
 $(function(){
 
-    const { parseInt } = require("lodash");
+console.log($('#ingredients').val());
 
     // Loops though and appends old ingredients
-    if ($('#ingredientsJSON').val().length > 0) {
-        let oldIngredientJSON = JSON.parse($('#ingredientsJSON').val());
-        $.each(oldIngredientJSON,function(index){
-            let currentOldIngredient = oldIngredientJSON[index];
+    if ($('#ingredients').val().length > 0) {
+        let oldIngredient = JSON.parse($('#ingredients').val());
+        
+        $.each(oldIngredient,function(index){
+            let currentOldIngredient = oldIngredient[index];
             $('#ingredientsList').append(
-                '<li class="list-group-item fs-6" value=\'' + JSON.stringify(currentOldIngredient) + '\'><a onclick="this.parentNode.remove()"><img src="/images/iconExit.svg"></a>' + currentOldIngredient.ingredientQuantity + " " + currentOldIngredient.ingredientName + '</li>'
+                '<li class="list-group-item fs-6" value=\'' + currentOldIngredient + '\'><a onclick="this.parentNode.remove()"><img src="/images/iconExit.svg"></a>' + currentOldIngredient + '</li>'
             );
         });
     }
@@ -36,25 +37,15 @@ $(function(){
     });
 
     function addIngredient() {
-        var error = false;
-        let ingredientQuantity = $("#ingredientQuantity").val();
-        let ingredientName = $("#ingredientName").val();
-        if (ingredientQuantity == 0 || ingredientQuantity === null) {
-            var error = true;
-            $('#ingredientQuantity').addClass('is-invalid');
-        }
-        if (ingredientName === "") {
-            var error = true;
+        let error = false;
+        let ingredient = $("#ingredientName").val();
+        if (ingredient === "") {
+            error = true;
             $('#ingredientName').addClass('is-invalid');
         }
         if (error != true) {
-            // Create new list item with JSON object as value attr
-            let ingredientJSON = JSON.stringify({
-                "ingredientQuantity":  parseInt(ingredientQuantity),
-                "ingredientName": ingredientName
-            });
             $('#ingredientsList').append(
-                '<li class="list-group-item fs-6" value=\'' + ingredientJSON + '\'><a class="class" onclick="this.parentNode.remove()"><img src="/images/iconExit.svg"></a>' + ingredientQuantity + " " + ingredientName + '</li>'
+                '<li class="list-group-item fs-6" value=\'' + ingredient + '\'><a onclick="this.parentNode.remove()"><img src="/images/iconExit.svg"></a>' + ingredient + '</li>'
             );
             $("#ingredientQuantity").removeClass('is-invalid').val('');
             $("#ingredientName").removeClass('is-invalid').val('');
@@ -65,19 +56,19 @@ $(function(){
 
     $(".container form").on("submit", function(){
         encodeIngredients();
-        if($('#ingredientsJSON').val() == "[]"){
+        if($('#ingredients').val() == "[]"){
             alert('You have not added any ingredients to your recipe!');
             return false;
         }
     })
 
     function encodeIngredients(){
-        let ingredientListJSON = [];
+        let ingredientList = [];
         $( "#ingredientsList li" ).each(function() {
-                let ingredientJSON = JSON.parse($(this).attr('value'));
-                ingredientListJSON.push(ingredientJSON); 
+                let ingredientItem = $(this).attr( "value" );
+                ingredientList.push(ingredientItem); 
             });
-        ingredientListJSON = JSON.stringify(ingredientListJSON);
-        $('#ingredientsJSON').val(ingredientListJSON);
+        ingredientList = JSON.stringify(ingredientList);
+        $('#ingredients').val(ingredientList);
     }
 })

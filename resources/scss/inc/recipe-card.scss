@@ -1,7 +1,4 @@
-// variables
-@import 'variables.scss';
-
-#recipes > .container > h2{
+#recipes > .container > .h1{
     padding:3vh 0;
 }
 
@@ -43,12 +40,14 @@
 .recipe-card > a:hover{
     height:100%;
     display:grid;
-    grid-template-rows: 16vh 1fr;
+    grid-template-rows: auto;
     text-decoration: none;
     color:$grey;
 }
 
 .recipe-image{
+    height:12vw;
+    min-height: 120px;
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -68,5 +67,5 @@
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 0.5px;
-    word-break: break-all;
+    word-break:keep-all;
 }

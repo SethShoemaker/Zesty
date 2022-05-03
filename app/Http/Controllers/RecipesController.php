@@ -52,12 +52,13 @@ class RecipesController extends Controller
         $userID = Auth::id();
 
         $recipe = Recipe::create([
+
             'title' => $request['title'],
-            'servings' => $request['servings'],
-            'description' => $request['description'],
+            'servings' => $request['servings'] ?? null,
+            'description' => $request['description'] ?? null,
             'user_id' => $userID,
-            'ingredients' => $request['ingredientsJSON'],
-            'instructions' => $request['instructions'],
+            'ingredients' => $request['ingredients'],
+            'instructions' => $request['instructions'] ?? null,
         ]);
 
         // Saves file in storage and name in DB
@@ -88,7 +89,19 @@ class RecipesController extends Controller
     {
         $recipe = Recipe::find($id);
 
-        return view('recipes.show')->with('recipe', $recipe);
+        return view(
+            'recipes.show',
+            [
+                'title' => $recipe['title'],
+                'servings' => $recipe['servings'],
+                'description' => $recipe['description'],
+                'image' => $recipe['image'],
+                'ingredients' => json_decode($recipe['ingredients']),
+                'instructions' => $recipe['instructions'],
+                'user_id' => $recipe['user_id'],
+                'id' => $recipe['id'],
+            ]
+        );
     }
 
     /**
@@ -125,8 +138,8 @@ class RecipesController extends Controller
         }
 
         $recipe->title = $request['title'];
-        $recipe->servings = $request['servings'];
-        $recipe->description = $request['description'];
+        $recipe->servings = $request['servings'] ?? null;
+        $recipe->description = $request['description'] ?? null;
 
         if (!empty($request->file('image'))) {
 
@@ -142,7 +155,7 @@ class RecipesController extends Controller
             $recipe->image = $avatarStoreName;
         }
 
-        $recipe->ingredients = $request['ingredientsJSON'];
+        $recipe->ingredients = $request['ingredients'];
         $recipe->instructions = $request['instructions'];
         $recipe->save();
 

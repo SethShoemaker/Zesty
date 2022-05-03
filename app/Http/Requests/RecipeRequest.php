@@ -25,11 +25,11 @@ class RecipeRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:30'],
-            'servings' => ['required', 'numeric'],
-            'description' => ['required', 'string', 'max:350'],
-            'image' => ['mimes:jpg,jpeg,png', 'max:5048'],
-            'ingredientsJSON' => ['required', 'json'],
-            'instructions' => ['required', 'string', 'max:500'],
+            'servings' => ['nullable', 'numeric'],
+            'description' => ['nullable', 'max:350'],
+            'image' => ['nullable', 'mimes:jpg,jpeg,png', 'max:5048'],
+            'ingredients' => ['required', 'json'],
+            'instructions' => ['nullable', 'max:500'],
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RecipesController;
 
@@ -17,11 +18,9 @@ use App\Http\Controllers\RecipesController;
 */
 
 // Index
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index']);
 
-
+// Auth
 Auth::routes();
 
 
