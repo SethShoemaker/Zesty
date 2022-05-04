@@ -20,7 +20,7 @@ const mix = require('laravel-mix');
 mix 
 
     // Universal files
-    .js('resources/js/app.js', 'public/js')
+    .js('resources/js/main.js', 'public/js')
     .sass('resources/scss/main.scss', 'public/css')
 
 
@@ -31,16 +31,20 @@ mix
     // Recipes
     .sass('resources/scss/recipes/create.scss', 'public/css/recipes')
     .sass('resources/scss/recipes/show.scss', 'public/css/recipes')
+    .sass('resources/scss/recipes/index.scss', 'public/css/recipes')
     .js('resources/js/recipes/create.js', 'public/js/recipes')
 
 
     // Welcome
-    .sass('resources/scss/welcome/welcome.scss', 'public/css/welcome')
+    .sass('resources/scss/welcome.scss', 'public/css')
 
 
     // Dashboard
-    .sass('resources/scss/dashboard/dashboard.scss', 'public/css/dashboard')
-    .js('resources/js/dashboard/dashboard.js', 'public/js/dashboard')
+    .sass('resources/scss/dashboard.scss', 'public/css')
+    .js('resources/js/dashboard.js', 'public/js')
+
+    // User
+    .sass('resources/scss/user.scss', 'public/css')
 
 
     .sourceMaps();

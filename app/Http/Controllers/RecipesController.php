@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\RecipeRequest;
 use App\Models\Recipe;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 class RecipesController extends Controller
@@ -28,7 +29,18 @@ class RecipesController extends Controller
      */
     public function index()
     {
-        //
+        $q = $_GET['q'];
+
+        $recipes = DB::table('recipes')
+            ->where('title', 'LIKE', "%" . $q . "%")
+            ->orWhere('description', 'LIKE', '%' . $q . '%')
+            ->orWhere('instructions', 'LIKE', '%' . $q . '%')
+            ->paginate(60);
+
+        return view('recipes.index', [
+            'recipes' => $recipes,
+            'q' => $q
+        ]);
     }
 
     /**
@@ -87,19 +99,35 @@ class RecipesController extends Controller
      */
     public function show($id)
     {
-        $recipe = Recipe::find($id);
+
+        $query = DB::table('recipes')
+            ->select(
+                'recipes.title',
+                'recipes.description',
+                'recipes.servings',
+                'recipes.image',
+                'recipes.ingredients',
+                'recipes.instructions',
+                'recipes.user_id',
+                'users.username'
+            )
+            ->join('users', 'recipes.user_id', '=', 'users.id')
+            ->where('recipes.id', '=',  $id)
+            ->get();
+
+        $recipe = $query[0];
 
         return view(
             'recipes.show',
             [
-                'title' => $recipe['title'],
-                'servings' => $recipe['servings'],
-                'description' => $recipe['description'],
-                'image' => $recipe['image'],
-                'ingredients' => json_decode($recipe['ingredients']),
-                'instructions' => $recipe['instructions'],
-                'user_id' => $recipe['user_id'],
-                'id' => $recipe['id'],
+                'title' => $recipe->title,
+                'servings' => $recipe->servings,
+                'description' => $recipe->description,
+                'image' => $recipe->image,
+                'ingredients' => json_decode($recipe->ingredients),
+                'instructions' => $recipe->instructions,
+                'user_id' => $recipe->user_id,
+                'username' => $recipe->username,
             ]
         );
     }

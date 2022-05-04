@@ -29,11 +29,19 @@ class DashboardController extends Controller
      * 
      */
 
-    public function index()
+    public function show()
     {
-        $user_id = Auth::id();
-        $recipes = Recipe::where('user_id', $user_id)->paginate(20);
-        return view('dashboard')->with('recipes', $recipes);
+        $user = Auth::user();
+        $recipes = Recipe::where('user_id', $user->id)->paginate(20);
+
+        return view('dashboard', [
+            'username' => $user->username,
+            'name' => $user->name,
+            'avatar' => $user->avatar,
+            'bio' => $user->bio,
+            'created_at' => $user->created_at->format('m/d/Y'),
+            'recipes' => $recipes
+        ]);
     }
 
 

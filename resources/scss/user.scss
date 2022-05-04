@@ -1,8 +1,5 @@
 // variables
-@import '../inc/variables.scss';
-
-// Form styles
-@import "../inc/form.scss";
+@import 'inc/variables.scss';
 
 #profile{
     background-color: #fff;
@@ -56,80 +53,6 @@
     letter-spacing: 0.5px;
 }
 
-#updateBtn {
-    margin-left:8%;
-}
-
-#editContainer{
-    display: none;
-    align-items: center;
-    justify-content: center;
-    height:100vh;
-    width:100vw;
-    position: fixed;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    z-index: 2;
-}
-
-#screenOverlay{
-    display: none;
-    background-color: rgba($color: #000000, $alpha: 0.7);
-    height:100vh;
-    width:100vw;
-    position: fixed;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    z-index: 2;
-}
-
-#updateForm{
-    height:70vh;
-    width:88vw;
-    padding:1vw;
-    max-width:600px;
-    background-color: #fff;
-    z-index: 3;
-}
-
-#avatarContainer{
-    height:30%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-#avatarFrame{
-    position: relative;
-    height:80%;
-    width:40%;
-    width:fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-#editIcon{
-    position: absolute;
-    top:-8%;
-    right:-8%;
-    height:27px;
-    width:27px;
-    padding:4px;
-    border-radius:50%;
-    background-color: $grey;
-}
-
-#avatarFrame > img{
-    max-height:100%;
-    max-width:100%;
-}
-
 @media screen and (max-width:768px) {
     #profileHeading h1{
         font-size: calc(1.6rem + 1vw) !important;
@@ -163,4 +86,4 @@
 }
 
 // recipe card
-@import '../inc/recipe-card.scss';
+@import 'inc/recipe-card.scss';

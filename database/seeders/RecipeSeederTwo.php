@@ -7,7 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
-class RecipeSeeder extends Seeder
+class RecipeSeederTwo extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,14 +18,13 @@ class RecipeSeeder extends Seeder
     {
         \App\Models\User::factory(20)->create();
 
-        $json = Storage::disk('local')->get('/recipe-seeds/recipes.1.json');
+        $json = Storage::disk('local')->get('/recipe-seeds/recipes.2.json');
         $recipes = json_decode($json);
 
         foreach ($recipes as $recipe) {
-
             Recipe::create(array(
                 'title' => $recipe->title,
-                'user_id' => rand(1, 40),
+                'user_id' => rand(21, 40),
                 'ingredients' => json_encode($recipe->ingredients),
                 'instructions' => $recipe->instructions ?? null,
             ));

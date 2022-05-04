@@ -1,7 +1,7 @@
 @extends('layouts.app_layout')
 @section('title', "Dashboard")
 @section('stylesheets')
-    <link href="{{ asset('css/dashboard/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     @if (session('status'))
@@ -10,16 +10,16 @@
     <section id="profile">
         <div id='profileHeading'>
             <div id='userAvatar'>
-                <img src="{{ asset('/storage/avatars/' . Auth::user()->avatar) }}">
+                <img src="{{ asset('/storage/avatars/' . $avatar) }}">
             </div>
             <div id='userDetails'>
-                <h1>{{ Auth::user()->username }}</h1>
-                <h2>{{ Auth::user()->name }}</h2>
-                <p>Member since {{ Auth::user()->created_at->format('m/d/Y') }}</p>
+                <h1>{{ $username }}</h1>
+                <h2>{{ $name }}</h2>
+                <p>Member since {{ $created_at }}</p>
             </div>
         </div>
         <p id='userSummary'>
-            {{ Auth::user()->bio }}
+            {{ $bio }}
         </p>
         <button class='btn btn-primary' id='updateBtn'>Edit Profile</button>
     </section>
@@ -30,7 +30,7 @@
             <div class="col-12" id="avatarContainer">
                 <label for='avatar' id="avatarFrame">
                     <img id='editIcon' src='/images/iconEdit.svg'>
-                    <img id='avatarPreview' src="{{ asset('/storage/avatars/' . Auth::user()->avatar) }}">
+                    <img id='avatarPreview' src="{{ asset('/storage/avatars/' . $avatar) }}">
                 </label>
                 <input type="file" accept="image/jpg, image/jpeg, image/png" name="avatar" class='d-none' id="avatar">
             </div>
@@ -39,7 +39,7 @@
                     Name
                 </label>
 
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ Auth::user()->name }} "autocomplete="name">
+                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $name }} "autocomplete="name">
             
                 @error('name')
                     <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
                     Bio
                 </label>
             
-                <textarea name="bio" class="form-control @error('bio') is-invalid @enderror" id="bio" rows="3">{{ Auth::user()->bio }}</textarea>
+                <textarea name="bio" class="form-control @error('bio') is-invalid @enderror" id="bio" rows="3">{{ $bio }}</textarea>
 
                 @error('bio')
                     <span class="invalid-feedback" role="alert">

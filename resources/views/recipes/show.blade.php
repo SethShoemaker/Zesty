@@ -9,7 +9,7 @@
         <br>
         {{ $description }}
         <br>
-        {{ $user_id }}
+        {{ $username }}
         <br>
         {{ $servings }}
         <br>

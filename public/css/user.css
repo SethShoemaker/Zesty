@@ -1,0 +1,153 @@
+#profile {
+  background-color: #fff;
+  padding-bottom: 5vh;
+  border-bottom: 2px solid #222222;
+}
+
+#profileHeading {
+  padding: 5vh 7%;
+  display: flex;
+  align-items: center;
+}
+
+#userDetails,
+#userAvatar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#userAvatar > img {
+  max-width: 30vw;
+  max-height: 22vh;
+  margin-right: 2vw;
+}
+
+#userDetails h1 {
+  font-weight: 500;
+  font-size: calc(1.475rem + 2.7vw);
+  margin-bottom: 10px;
+  letter-spacing: 0.7px;
+}
+
+#userDetails h2 {
+  font-weight: 400;
+  font-size: calc(1.275rem + 0.3vw);
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+#userDetails p {
+  font-weight: 200;
+  font-size: 1.25rem;
+  margin-bottom: 0px;
+  letter-spacing: 0.5px;
+}
+
+#userSummary {
+  margin-left: 8%;
+  font-weight: 200;
+  font-size: 1.25rem;
+  width: 60%;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 768px) {
+  #profileHeading h1 {
+    font-size: calc(1.6rem + 1vw) !important;
+  }
+
+  #profileHeading h2 {
+    font-size: calc(0.8rem + 1vw) !important;
+  }
+
+  #profileHeading p {
+    font-size: calc(0.6rem + 1vw) !important;
+  }
+
+  #userSummary {
+    width: 100%;
+    font-size: calc(0.5rem + 1vw);
+  }
+
+  #updateBtn {
+    font-size: 12px;
+  }
+
+  #editIcon {
+    height: 23px;
+    width: 23px;
+  }
+}
+.container {
+  width: 89vw;
+}
+
+#recipes > .container > .h1 {
+  padding: 3vh 0;
+}
+
+#recipes-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.recipe-card {
+  border: 1.5px solid #222222;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px 0px;
+  width: 46%;
+  margin: 0 2% 3vh 2%;
+}
+
+@media screen and (min-width: 576px) {
+  .recipe-card {
+    width: 29.333333333%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .recipe-card {
+    width: 21%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .recipe-card {
+    width: 16%;
+  }
+}
+.recipe-card > a,
+.recipe-card > a:hover {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  text-decoration: none;
+  color: #222222;
+}
+
+.recipe-image {
+  height: 12vw;
+  min-height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.recipe-title {
+  width: 100%;
+  margin: 1vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.recipe-title > h3 {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  word-break: keep-all;
+}

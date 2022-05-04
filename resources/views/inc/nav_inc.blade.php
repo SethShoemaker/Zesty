@@ -21,8 +21,8 @@
             </a>
         </div>
         <div id="searchContainer">
-            <form action='/search' method='post'>
-                <input id='q' type='text' name='q' placeholder='Search'>
+            <form action='/search' method='GET'>
+                <input id='q' type='text' name='q' placeholder='Search' value='{{ $q ?? null }}'>
                 <button type='submit'>
                     <img src='/images/iconSearch.svg'>
                 </button>
