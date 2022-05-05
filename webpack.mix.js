@@ -17,10 +17,9 @@ const mix = require('laravel-mix');
     }
 });
 
-mix 
-
+mix
     // Universal files
-    .js('resources/js/main.js', 'public/js')
+    .js('resources/js/app.js', 'public/js')
     .sass('resources/scss/main.scss', 'public/css')
 
 
@@ -42,6 +41,7 @@ mix
     // Dashboard
     .sass('resources/scss/dashboard.scss', 'public/css')
     .js('resources/js/dashboard.js', 'public/js')
+
 
     // User
     .sass('resources/scss/user.scss', 'public/css')

@@ -16,7 +16,7 @@ body > nav{
     z-index: 1;
 }
 #navContainer{
-    width:96vw;
+    width:94vw;
     height:55px;
 }
 @media screen and (min-width:768px) {
@@ -114,9 +114,15 @@ body > nav{
     align-items: center;
     justify-content: flex-end;
 }
-#iconContainer > a{
+#iconContainer > .dropdown > a{
     margin-left:20px;
-    color: #fff;
-    text-decoration: none;
-    font-size:1.2rem;
+    height:18px;
+    width:18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#iconContainer > .dropdown > a > img{
+    max-height:100%;
+    max-width:100%;
 }

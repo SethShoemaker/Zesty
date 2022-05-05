@@ -45,8 +45,8 @@
 
 .recipe-image {
   height: 10vw;
-  min-height: 120px;
-  background-size: 90%;
+  min-height: 80px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
 }

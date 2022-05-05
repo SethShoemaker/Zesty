@@ -48,8 +48,8 @@
 
 .recipe-image{
     height:10vw;
-    min-height: 120px;
-    background-size:90%;
+    min-height: 80px;
+    background-size:100%;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -80,6 +80,10 @@
     #recipes > .container > .h1{
         font-size:24px;
     }
+
+    // .recipe-image{
+    //     height:8vw;
+    // }
     
     .recipe-title > h3{
         font-size: 12px;

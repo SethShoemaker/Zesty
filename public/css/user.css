@@ -30,8 +30,8 @@
 
 #userDetails h1 {
   font-weight: 500;
-  font-size: 61px;
-  margin-bottom: 10px;
+  font-size: 56px;
+  margin-bottom: 6px;
   letter-spacing: 0.7px;
 }
 
@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 768px) {
   #profileHeading h1 {
-    font-size: 8vw;
+    font-size: 7.3vw;
   }
 
   #profileHeading h2 {
@@ -67,12 +67,12 @@
   }
 
   #profileHeading p {
-    font-size: 2.7vw;
+    font-size: 3vw;
   }
 
   #userSummary {
     width: 100%;
-    font-size: 2.7vw;
+    font-size: 3vw;
   }
 }
 .container {
@@ -126,8 +126,8 @@
 
 .recipe-image {
   height: 10vw;
-  min-height: 120px;
-  background-size: 90%;
+  min-height: 80px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
 }

@@ -7,8 +7,22 @@
             </a>
         </div>
         <div id="iconContainer">
-            <a>Search</a>
-            <a>Profile</a>
+            <div class="dropdown">
+                <a id="SearchToggler" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src='{{ asset('images/iconSearch.svg') }}'>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="SearchToggler">
+                    <li class="dropdown-item">Action</li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a id="profileToggler" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src='{{ asset('images/iconProfile.svg') }}'>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="profileToggler">
+                    <li class="dropdown-item">Action</li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
@@ -43,9 +57,6 @@
                     </a>
                 
                     <ul class="dropdown-menu" aria-labelledby="navDropdownToggler">
-                        <li>
-                            <a class="dropdown-item" href="{{ url('/recipe/create') }}">Post Recipe</a>
-                        </li>
                         <li>
                             <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
                         </li>

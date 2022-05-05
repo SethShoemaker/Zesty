@@ -76,10 +76,9 @@ class RecipesController extends Controller
         if (!empty($request->file('image'))) {
 
             // Creates file name to be stored
-            $recipeTitle = $request['title'];
-            $time = time();
+            $recipeID = $recipe->id;
             $fileMime = $request->file('image')->extension();
-            $avatarStoreName = $recipeTitle . "-" .  $userID . "-" . $time . "." .  $fileMime;
+            $avatarStoreName = $recipeID . "." .  $fileMime;
 
             $request->file('image')->storeAs('public/recipes', $avatarStoreName);
 

@@ -26,10 +26,10 @@ class RecipeRequest extends FormRequest
         return [
             'title' => ['required', 'string', 'max:30'],
             'servings' => ['nullable', 'numeric'],
-            'description' => ['nullable', 'max:350'],
+            'description' => ['nullable', 'max:500'],
             'image' => ['nullable', 'mimes:jpg,jpeg,png', 'max:5048'],
             'ingredients' => ['required', 'json'],
-            'instructions' => ['nullable', 'max:500'],
+            'instructions' => ['nullable', 'max:1500'],
         ];
     }
 }
