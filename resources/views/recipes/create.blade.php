@@ -10,7 +10,7 @@
 @endif
         <h1 class="mb-3">Post Recipe</h1>
         <p>* indicates field is required</p>
-        <form action="{{ url('/recipes') }}" method="post" enctype='multipart/form-data'>
+        <form action="{{ url('/recipe') }}" method="post" enctype='multipart/form-data'>
             @csrf
             <div class="row form-section">
                 <h2 class='h5'>General Information</h2>

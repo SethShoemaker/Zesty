@@ -6,7 +6,6 @@ use App\Http\Requests\RecipeRequest;
 use App\Models\Recipe;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
 
 class RecipesController extends Controller
 {
@@ -88,7 +87,7 @@ class RecipesController extends Controller
             $recipe->save();
         }
 
-        return Redirect::to('/recipes/' . $recipe->id);
+        return redirect('/recipe/' . $recipe->id);
     }
 
     /**
@@ -102,6 +101,7 @@ class RecipesController extends Controller
 
         $query = DB::table('recipes')
             ->select(
+                'recipes.id',
                 'recipes.title',
                 'recipes.description',
                 'recipes.servings',
@@ -120,6 +120,7 @@ class RecipesController extends Controller
         return view(
             'recipes.show',
             [
+                'id' => $recipe->id,
                 'title' => $recipe->title,
                 'servings' => $recipe->servings,
                 'description' => $recipe->description,
@@ -187,7 +188,7 @@ class RecipesController extends Controller
         $recipe->instructions = $request['instructions'];
         $recipe->save();
 
-        return Redirect::to('/recipes/' . $recipe->id);
+        return redirect('/recipe/' . $recipe->id);
     }
 
     /**

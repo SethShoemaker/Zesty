@@ -16,7 +16,7 @@
 <body>
     @include('inc.nav_inc')
     <main>
-        <div class="outer-container">
+        <div id="outer-container">
             @yield('content')
         </div>
     </main>    

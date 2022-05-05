@@ -1,6 +1,6 @@
-.outer-container input,
-.outer-container textarea,
-.outer-container select {
+#outer-container input,
+#outer-container textarea,
+#outer-container select {
   border: 1px solid #222222 !important;
   border-radius: 0 !important;
   background-color: #f5f5f5;
@@ -8,25 +8,25 @@
   resize: none;
 }
 
-.outer-container input:focus,
-.outer-container textarea:focus,
-.outer-container select:focus {
+#outer-container input:focus,
+#outer-container textarea:focus,
+#outer-container select:focus {
   box-shadow: none;
   background-color: #e0e0e0;
   border: inherit;
 }
 
-.outer-container button:focus {
+#outer-container button:focus {
   box-shadow: none;
 }
 
-.outer-container .is-invalid,
-.outer-container .is-invalid:focus {
+#outer-container .is-invalid,
+#outer-container .is-invalid:focus {
   box-shadow: none !important;
   border-color: #dc3545 !important;
 }
 
-.outer-container .btn {
+#outer-container .btn {
   margin-left: 0 12px;
   border: none !important;
   border-radius: 0 !important;
@@ -36,55 +36,60 @@
   letter-spacing: 0.7px;
 }
 
-.outer-container .form-check-label,
-.outer-container .form-check-input {
+#outer-container .form-check-label,
+#outer-container .form-check-input {
   cursor: pointer;
 }
 
-.outer-container .form-check-input {
+#outer-container .form-check-input {
   background-color: #f5f5f5 !important;
 }
 
-.outer-container .form-check-input:checked {
+#outer-container .form-check-input:checked {
   background-color: #1e8b1e !important;
 }
 
-.outer-container .btn-link {
+#outer-container .btn-link {
   background-color: #fff !important;
   font-size: 0.95rem;
   color: #000;
 }
 
-.outer-container .btn-secondary {
+#outer-container .btn-secondary {
   background-color: #222222;
   color: #fff;
 }
 
-.outer-container .btn-link {
+#outer-container .btn-link {
   text-decoration: none;
 }
 
-.outer-container .btn-link:hover {
+#outer-container .btn-link:hover {
   text-decoration: underline;
 }
 
-.outer-container .btn-primary {
+#outer-container .btn-primary {
   background-color: #1e8b1e;
   color: #fff;
 }
 
-.outer-container .btn-primary:hover {
+#outer-container .btn-primary:hover {
   background-color: #1e8b1e;
 }
 
+@media screen and (max-width: 768px) {
+  #outer-container .btn {
+    font-size: 3vw;
+  }
+}
 #profile {
   background-color: #fff;
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
   border-bottom: 2px solid #222222;
 }
 
 #profileHeading {
-  padding: 5vh 7%;
+  padding: 3vh 5%;
   display: flex;
   align-items: center;
 }
@@ -97,28 +102,33 @@
 }
 
 #userAvatar > img {
-  max-width: 30vw;
-  max-height: 22vh;
+  max-width: 22vw;
+  max-height: 21vh;
   margin-right: 2vw;
+}
+
+#userDetails {
+  max-width: 55vw;
+  word-break: break-all;
 }
 
 #userDetails h1 {
   font-weight: 500;
-  font-size: calc(1.475rem + 2.7vw);
+  font-size: 61px;
   margin-bottom: 10px;
   letter-spacing: 0.7px;
 }
 
 #userDetails h2 {
   font-weight: 400;
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: 30px;
   margin-bottom: 2px;
   letter-spacing: 0.5px;
 }
 
 #userDetails p {
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 21px;
   margin-bottom: 0px;
   letter-spacing: 0.5px;
 }
@@ -126,36 +136,27 @@
 #userSummary {
   margin-left: 8%;
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 21px;
   width: 60%;
   letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 768px) {
   #profileHeading h1 {
-    font-size: calc(1.6rem + 1vw) !important;
+    font-size: 8vw;
   }
 
   #profileHeading h2 {
-    font-size: calc(0.8rem + 1vw) !important;
+    font-size: 4vw;
   }
 
   #profileHeading p {
-    font-size: calc(0.6rem + 1vw) !important;
+    font-size: 2.7vw;
   }
 
   #userSummary {
     width: 100%;
-    font-size: calc(0.5rem + 1vw);
-  }
-
-  #updateBtn {
-    font-size: 12px;
-  }
-
-  #editIcon {
-    height: 23px;
-    width: 23px;
+    font-size: 2.7vw;
   }
 }
 .container {
@@ -164,6 +165,7 @@
 
 #recipes > .container > .h1 {
   padding: 3vh 0;
+  font-size: 38px;
 }
 
 #recipes-list {
@@ -207,9 +209,9 @@
 }
 
 .recipe-image {
-  height: 12vw;
+  height: 10vw;
   min-height: 120px;
-  background-size: cover;
+  background-size: 90%;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -219,7 +221,7 @@
   margin: 1vh 0;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .recipe-title > h3 {
@@ -228,9 +230,27 @@
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.5px;
+  padding: 0 3px;
   word-break: keep-all;
 }
 
+#no-results {
+  font-size: 21px;
+}
+
+@media screen and (max-width: 768px) {
+  #recipes > .container > .h1 {
+    font-size: 24px;
+  }
+
+  .recipe-title > h3 {
+    font-size: 12px;
+  }
+
+  #no-results {
+    font-size: 16px;
+  }
+}
 #updateBtn {
   margin-left: 8%;
 }
@@ -305,4 +325,11 @@
 #avatarFrame > img {
   max-height: 100%;
   max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #editIcon {
+    height: 20px;
+    width: 20px;
+  }
 }

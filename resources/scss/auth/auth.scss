@@ -13,3 +13,10 @@
     padding:3vh 3vw;
     margin-top:calc(55px + 1vh);
 }
+
+
+@media screen and (max-width:768px) {
+    .btn-link{
+        font-size:3vw;
+    }
+}

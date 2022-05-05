@@ -1,5 +1,6 @@
 #recipes > .container > .h1 {
   padding: 3vh 0;
+  font-size: 38px;
 }
 
 #recipes-list {
@@ -43,9 +44,9 @@
 }
 
 .recipe-image {
-  height: 12vw;
+  height: 10vw;
   min-height: 120px;
-  background-size: cover;
+  background-size: 90%;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -55,7 +56,7 @@
   margin: 1vh 0;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .recipe-title > h3 {
@@ -64,5 +65,24 @@
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.5px;
+  padding: 0 3px;
   word-break: keep-all;
+}
+
+#no-results {
+  font-size: 21px;
+}
+
+@media screen and (max-width: 768px) {
+  #recipes > .container > .h1 {
+    font-size: 24px;
+  }
+
+  .recipe-title > h3 {
+    font-size: 12px;
+  }
+
+  #no-results {
+    font-size: 16px;
+  }
 }

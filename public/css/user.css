@@ -1,11 +1,11 @@
 #profile {
   background-color: #fff;
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
   border-bottom: 2px solid #222222;
 }
 
 #profileHeading {
-  padding: 5vh 7%;
+  padding: 3vh 5%;
   display: flex;
   align-items: center;
 }
@@ -18,28 +18,33 @@
 }
 
 #userAvatar > img {
-  max-width: 30vw;
-  max-height: 22vh;
+  max-width: 22vw;
+  max-height: 21vh;
   margin-right: 2vw;
+}
+
+#userDetails {
+  max-width: 55vw;
+  word-break: break-all;
 }
 
 #userDetails h1 {
   font-weight: 500;
-  font-size: calc(1.475rem + 2.7vw);
+  font-size: 61px;
   margin-bottom: 10px;
   letter-spacing: 0.7px;
 }
 
 #userDetails h2 {
   font-weight: 400;
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: 30px;
   margin-bottom: 2px;
   letter-spacing: 0.5px;
 }
 
 #userDetails p {
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 21px;
   margin-bottom: 0px;
   letter-spacing: 0.5px;
 }
@@ -47,36 +52,27 @@
 #userSummary {
   margin-left: 8%;
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 21px;
   width: 60%;
   letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 768px) {
   #profileHeading h1 {
-    font-size: calc(1.6rem + 1vw) !important;
+    font-size: 8vw;
   }
 
   #profileHeading h2 {
-    font-size: calc(0.8rem + 1vw) !important;
+    font-size: 4vw;
   }
 
   #profileHeading p {
-    font-size: calc(0.6rem + 1vw) !important;
+    font-size: 2.7vw;
   }
 
   #userSummary {
     width: 100%;
-    font-size: calc(0.5rem + 1vw);
-  }
-
-  #updateBtn {
-    font-size: 12px;
-  }
-
-  #editIcon {
-    height: 23px;
-    width: 23px;
+    font-size: 2.7vw;
   }
 }
 .container {
@@ -85,6 +81,7 @@
 
 #recipes > .container > .h1 {
   padding: 3vh 0;
+  font-size: 38px;
 }
 
 #recipes-list {
@@ -128,9 +125,9 @@
 }
 
 .recipe-image {
-  height: 12vw;
+  height: 10vw;
   min-height: 120px;
-  background-size: cover;
+  background-size: 90%;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -140,7 +137,7 @@
   margin: 1vh 0;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .recipe-title > h3 {
@@ -149,5 +146,24 @@
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.5px;
+  padding: 0 3px;
   word-break: keep-all;
+}
+
+#no-results {
+  font-size: 21px;
+}
+
+@media screen and (max-width: 768px) {
+  #recipes > .container > .h1 {
+    font-size: 24px;
+  }
+
+  .recipe-title > h3 {
+    font-size: 12px;
+  }
+
+  #no-results {
+    font-size: 16px;
+  }
 }

@@ -1,6 +1,6 @@
-.outer-container input,
-.outer-container textarea,
-.outer-container select {
+#outer-container input,
+#outer-container textarea,
+#outer-container select {
   border: 1px solid #222222 !important;
   border-radius: 0 !important;
   background-color: #f5f5f5;
@@ -8,25 +8,25 @@
   resize: none;
 }
 
-.outer-container input:focus,
-.outer-container textarea:focus,
-.outer-container select:focus {
+#outer-container input:focus,
+#outer-container textarea:focus,
+#outer-container select:focus {
   box-shadow: none;
   background-color: #e0e0e0;
   border: inherit;
 }
 
-.outer-container button:focus {
+#outer-container button:focus {
   box-shadow: none;
 }
 
-.outer-container .is-invalid,
-.outer-container .is-invalid:focus {
+#outer-container .is-invalid,
+#outer-container .is-invalid:focus {
   box-shadow: none !important;
   border-color: #dc3545 !important;
 }
 
-.outer-container .btn {
+#outer-container .btn {
   margin-left: 0 12px;
   border: none !important;
   border-radius: 0 !important;
@@ -36,47 +36,52 @@
   letter-spacing: 0.7px;
 }
 
-.outer-container .form-check-label,
-.outer-container .form-check-input {
+#outer-container .form-check-label,
+#outer-container .form-check-input {
   cursor: pointer;
 }
 
-.outer-container .form-check-input {
+#outer-container .form-check-input {
   background-color: #f5f5f5 !important;
 }
 
-.outer-container .form-check-input:checked {
+#outer-container .form-check-input:checked {
   background-color: #1e8b1e !important;
 }
 
-.outer-container .btn-link {
+#outer-container .btn-link {
   background-color: #fff !important;
   font-size: 0.95rem;
   color: #000;
 }
 
-.outer-container .btn-secondary {
+#outer-container .btn-secondary {
   background-color: #222222;
   color: #fff;
 }
 
-.outer-container .btn-link {
+#outer-container .btn-link {
   text-decoration: none;
 }
 
-.outer-container .btn-link:hover {
+#outer-container .btn-link:hover {
   text-decoration: underline;
 }
 
-.outer-container .btn-primary {
+#outer-container .btn-primary {
   background-color: #1e8b1e;
   color: #fff;
 }
 
-.outer-container .btn-primary:hover {
+#outer-container .btn-primary:hover {
   background-color: #1e8b1e;
 }
 
+@media screen and (max-width: 768px) {
+  #outer-container .btn {
+    font-size: 3vw;
+  }
+}
 .container {
   width: 89vw;
   min-height: auto;

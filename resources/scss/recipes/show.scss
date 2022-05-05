@@ -4,3 +4,95 @@
 // Form styles
 @import "../inc/form.scss";
 
+#outer-container{
+    margin-top:55px;
+}
+
+#recipe-container{
+    width:86%;
+    padding:0 5% 5vh 5%;
+    margin:auto;
+    padding-top:3vh;
+    background-color: #fff;
+    border: 2.5px solid $grey;
+}
+
+section{
+    margin-bottom:6vh;
+}
+
+#info-container{
+    display: flex;
+}
+
+#recipe-details{
+    min-width:40vw;
+}
+
+#recipe-details h1{
+    font-weight: 500;
+    font-size: 50px;
+    margin: 5vh 10px 10px 0;
+    letter-spacing: 0.7px;
+}
+
+#recipe-details h2{
+    font-weight: 400;
+    font-size: 21px;
+    margin-bottom:2px;
+    letter-spacing: 0.5px;
+}
+
+#recipe-details p{
+    font-weight: 200;
+    font-size: 21px;
+    margin-bottom:10px;
+    letter-spacing: 0.5px;
+}
+
+#recipe-details p a{
+    font-weight: 400;
+    color:$grey;
+    text-decoration: none;
+}
+
+#recipe-details p a:hover{
+    text-decoration: underline;
+}
+
+#recipe-image > img{   
+    margin-top:1vh; 
+    max-width:25vw;
+    max-height:25vh;
+}
+
+#description > .container > p{
+    margin-left:8%;
+    min-height:20px;
+    font-weight: 200;
+    font-size: 1.25rem;
+    width:60%;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width:768px) {
+
+    #recipe-container{
+        width:100%;
+        border-style:solid none;
+    }
+
+    #recipe-details h1{
+        margin-top:10px;
+        font-size: 6.5vw;    
+    }
+    
+    #recipe-details h2{
+        font-size: 2.7vw;
+    }
+    
+    #recipe-details p{
+        font-size: 2.7vw;
+    }
+
+}

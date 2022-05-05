@@ -72,16 +72,18 @@
         <div class="container">
             <h2 class='h1'>My Recipes</h2>
             <ul id="recipes-list">
-                @foreach ($recipes as $recipe)
+                @forelse ($recipes as $recipe)
                     <li class="recipe-card">
-                        <a href='{{ url('/recipes/' . $recipe->id) }}'>
+                        <a href='{{ url('/recipe/' . $recipe->id) }}'>
                             <div class="recipe-image" style="background-image: url({{ asset('/storage/recipes/' . $recipe->image) }})"></div>
                             <div class="recipe-title">
                                 <h3>{{ $recipe->title }}</h3>
                             </div>
                         </a>
                     </li>
-                @endforeach
+                @empty
+                    <p id='no-results'>No Results :(</p>
+                @endforelse
             </ul>
             {{ $recipes->links() }}
         </div> 

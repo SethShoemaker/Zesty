@@ -7,7 +7,7 @@
     <div class="container">
         <h1 class="mb-3">Edit Recipe</h1>
         <p>* indicates field is required</p>
-        <form action="{{ url('/recipes/' . $recipe->id) }}" method="POST" enctype='multipart/form-data'>
+        <form action="{{ url('/recipe/' . $recipe->id) }}" method="POST" enctype='multipart/form-data'>
             @csrf
             @method('put')
             <div class="row form-section">

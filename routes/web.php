@@ -33,5 +33,5 @@ Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::post('/dashboard', [DashboardController::class, 'update']);
 
 // Recipe routes
-Route::resource('recipes', RecipesController::class);
+Route::resource('recipe', RecipesController::class);
 Route::get('/search', [RecipesController::class, 'index']);

@@ -4,25 +4,45 @@
     <link href="{{ asset('css/recipes/show.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="container">
-        {{ $title }}
-        <br>
-        {{ $description }}
-        <br>
-        {{ $username }}
-        <br>
-        {{ $servings }}
-        <br>
-        @foreach ($ingredients as $ingredient)
-            {{ $ingredient }}
-            <br>
-        @endforeach
-        <br>
-        {{ $instructions }}
-        <br>
-        <img src='{{ url('/storage/recipes/' . $image) }}'>
-        @if ($user_id === Auth::id())
-                <a href='{{ url('/recipes/' . $id . "/edit") }}' class='btn btn-primary'>Edit</a>
-        @endif
+    <div id="recipe-container">
+        <section id="general-information">
+            <div id="info-container">
+                <div id="recipe-details">
+                    <h1>{{ $title }}</h1>
+                    @if (!empty($servings))
+                        <h2>{{ $servings }} Servings</h2>
+                    @endif
+                <p>Created by: <a href='{{ url('/user/' . $username)}}'>{{ $username }}</a></p>
+                @if ($user_id === Auth::id())
+                    <a href='{{ url('/recipe/' . $id . "/edit") }}' class='btn btn-primary'>Edit</a>
+                @endif
+                </div>
+                <div id="recipe-image">
+                    @if ($image != "default.svg")
+                        <img src='{{ url('/storage/recipes/' . $image) }}'>
+                    @endif
+                </div>
+            </div>
+            
+        </section>
+        <section id="description">
+            <p>{{ $description }}</p>
+        </section>
+        <section id="ingredients">
+            <h2 class='h5'>Ingredients</h2>
+            <ul>
+                @foreach ($ingredients as $ingredient)
+                    <li>
+                        {{ $ingredient }}
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+        <section id="instructions">
+            <h2 class='h5'>Instructions</h2>
+            <p>
+                {{ $instructions }}
+            </p>
+        </section>
     </div>
 @endsection

@@ -1,9 +1,9 @@
 // variables
 @import 'variables.scss';
 
-.outer-container input,
-.outer-container textarea,
-.outer-container select{
+#outer-container input,
+#outer-container textarea,
+#outer-container select{
     border:1px solid $grey !important;
     border-radius: 0 !important;
     background-color: $offWhiteLight;
@@ -11,25 +11,25 @@
     resize: none;
 }
 
-.outer-container input:focus,
-.outer-container textarea:focus,
-.outer-container select:focus {
+#outer-container input:focus,
+#outer-container textarea:focus,
+#outer-container select:focus {
     box-shadow: none;
     background-color: $offWhiteDark;
     border:inherit;
 }
 
-.outer-container button:focus{
+#outer-container button:focus{
     box-shadow: none;
 }
 
-.outer-container .is-invalid,
-.outer-container .is-invalid:focus{
+#outer-container .is-invalid,
+#outer-container .is-invalid:focus{
     box-shadow: none !important;
     border-color:#dc3545 !important;
 }
 
-.outer-container .btn{
+#outer-container .btn{
     margin-left:0 12px;
     border: none !important;
     border-radius: 0 !important;
@@ -39,43 +39,49 @@
     letter-spacing: 0.7px;
 }
 
-.outer-container .form-check-label,
-.outer-container .form-check-input{
+#outer-container .form-check-label,
+#outer-container .form-check-input{
     cursor: pointer;
 }
 
-.outer-container .form-check-input{
+#outer-container .form-check-input{
     background-color: $offWhiteLight !important;
 }
 
-.outer-container .form-check-input:checked{
+#outer-container .form-check-input:checked{
     background-color: $zestyGreen !important;
 }
 
-.outer-container .btn-link{
+#outer-container .btn-link{
     background-color: #fff !important;
     font-size:0.95rem;
     color:#000;
 }
 
-.outer-container .btn-secondary{
+#outer-container .btn-secondary{
     background-color: $grey;
     color:#fff;
 }
 
-.outer-container .btn-link{
+#outer-container .btn-link{
     text-decoration: none;
 }
 
-.outer-container .btn-link:hover{
+#outer-container .btn-link:hover{
     text-decoration: underline;
 }
 
-.outer-container .btn-primary {
+#outer-container .btn-primary {
     background-color: #1e8b1e;
     color: #fff;
 }
 
-.outer-container .btn-primary:hover {
+#outer-container .btn-primary:hover {
     background-color: $zestyGreen;
+}
+
+@media screen and (max-width:768px) {
+    #outer-container .btn{
+        font-size:3vw;
+    }
 }

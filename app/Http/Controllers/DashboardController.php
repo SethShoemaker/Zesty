@@ -20,9 +20,6 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
-
-
-
     /**
      * Show user dashboard.
      *
@@ -44,9 +41,6 @@ class DashboardController extends Controller
         ]);
     }
 
-
-
-
     /**
      * Update user record
      *
@@ -57,8 +51,8 @@ class DashboardController extends Controller
     {
         $request->validate([
             'avatar' => ['mimes:png,jpg,jpeg', 'max:5048'],
-            'name' => ['string', 'max:50'],
-            'bio' => ['string', 'max:350']
+            'name' => ['string', 'max:25'],
+            'bio' => ['string', 'max:100']
         ]);
 
         $user_id = Auth::user()->id;
