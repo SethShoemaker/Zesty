@@ -1,13 +1,13 @@
 $(function(){
     function showUpdateForm(){
         $('#editContainer').css("display", "flex" );       
-        $('#screenOverlay').show();
+        $('#screen-overlay').show();
         $('body').css("overflow", "hidden" );
     }
     
     function hideAvatarForm(){
         $('#editContainer').hide(); 
-        $('#screenOverlay').hide();
+        $('#screen-overlay').hide();
         $('body').css("overflow", "scroll" );
     }
 

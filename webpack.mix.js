@@ -20,6 +20,8 @@ const mix = require('laravel-mix');
 mix
     // Universal files
     .js('resources/js/app.js', 'public/js')
+    .js('resources/js/main.js', 'public/js')
+    .sass('resources/scss/app.scss', 'public/css')
     .sass('resources/scss/main.scss', 'public/css')
 
 

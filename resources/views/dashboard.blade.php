@@ -24,7 +24,6 @@
         <button class='btn btn-primary' id='updateBtn'>Edit Profile</button>
     </section>
     <div id="editContainer">
-        <div id="screenOverlay"></div>
         <form action="{{ url('/dashboard') }}" method="POST" class='row' id='updateForm' enctype= multipart/form-data>
             @csrf
             <div class="col-12" id="avatarContainer">
