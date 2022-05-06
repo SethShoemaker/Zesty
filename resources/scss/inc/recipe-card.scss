@@ -93,3 +93,28 @@
         font-size: 16px;
     }
 }
+
+#pagination-container{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn-pagination,
+.btn-pagination:hover{
+    color:#fff;
+    margin-right:24px;
+    border: none !important;
+    border-radius: 0 !important;
+    border: none;
+    font-weight: 500 !important;
+    letter-spacing: 0.7px;
+}
+
+#pagination-prev{
+    background-color: $grey;
+}
+
+#pagination-next{
+    background-color: $zestyGreen;
+}

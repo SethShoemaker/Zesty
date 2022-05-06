@@ -81,7 +81,7 @@
                         </a>
                     </li>
                 @empty
-                    <p id='no-results'>No Results :(</p>
+                    <p id='no-results'>You have no recipes</p>
                 @endforelse
             </ul>
             {{ $recipes->links() }}
@@ -89,5 +89,5 @@
     </section>
 @endsection
 @section('scripts')
-    <script src='/js/dashboard/dashboard.js'></script>
+    <script src='/js/dashboard.js'></script>
 @endsection

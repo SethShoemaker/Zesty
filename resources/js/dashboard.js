@@ -1,27 +1,25 @@
 $(function(){
-    function showUpdateForm(){
-        $('#editContainer').css("display", "flex" );       
-        $('#screen-overlay').show();
-        $('body').css("overflow", "hidden" );
-    }
-    
-    function hideAvatarForm(){
-        $('#editContainer').hide(); 
-        $('#screen-overlay').hide();
-        $('body').css("overflow", "scroll" );
+
+    function updateForm(action){
+        if(action == 'show'){
+            $('#editContainer').css("display", "flex" );
+            $('#screen-overlay').show();
+            $('body').css("overflow", "hidden" );
+        }
+        if(action == 'hide'){
+            $('#editContainer').hide(); 
+            $('#screen-overlay').hide();
+            $('body').css("overflow", "scroll" );
+        }
     }
 
     $("#updateBtn").on('click', function(){
-        showUpdateForm();
-    })
-
-    $("#screenOverlay").on('click', function(){
-        hideAvatarForm();
+        updateForm('show');
     })
 
     $("#updateFormCancel").on('click', function(e){
         e.preventDefault();
-        hideAvatarForm();
+        updateForm('hide');
     })
 
     $('#avatar').on('change', function(){

@@ -30,7 +30,7 @@
   margin-left: 0 12px;
   border: none !important;
   border-radius: 0 !important;
-  color: #000;
+  color: #222222;
   border: none;
   font-weight: 500 !important;
   letter-spacing: 0.7px;
@@ -161,7 +161,7 @@ section {
 #ingredients > ul > li {
   min-height: 20px;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 15.5px;
   letter-spacing: 0.5px;
   margin-bottom: 7px;
 }
@@ -169,7 +169,7 @@ section {
 #instructions > p {
   margin-left: 5px;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 15.5px;
   letter-spacing: 0.5px;
 }
 

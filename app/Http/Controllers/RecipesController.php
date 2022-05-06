@@ -30,11 +30,11 @@ class RecipesController extends Controller
     {
         $q = $_GET['q'];
 
-        $recipes = DB::table('recipes')
-            ->where('title', 'LIKE', "%" . $q . "%")
+        $recipes = Recipe::where('title', 'LIKE', "%" . $q . "%")
             ->orWhere('description', 'LIKE', '%' . $q . '%')
             ->orWhere('instructions', 'LIKE', '%' . $q . '%')
-            ->paginate(60);
+            ->simplePaginate(60)
+            ->withPath('/search?q=' . $q);
 
         return view('recipes.index', [
             'recipes' => $recipes,
@@ -198,6 +198,12 @@ class RecipesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $recipe = Recipe::find($id);
+
+        if ($recipe->user_id !== Auth::id()) {
+            abort(401);
+        }
+
+        $recipe->delete();
     }
 }

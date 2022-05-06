@@ -1,4 +1,3 @@
-<div id="screen-overlay"></div>
 <nav id='mobile-nav'>
     <div class="nav-container">
         <div class="logo-container">
@@ -52,6 +51,7 @@
         @endguest
     </div>
 </nav>
+<div id="screen-overlay"></div>
 <nav id="desktop-nav">
     <div class="nav-container">
         <div class="logo-container">
