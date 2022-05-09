@@ -77,7 +77,7 @@
                     </label>
 
                     <label for='image' id='imageFrame' @error('image') class='is-invalid' @enderror>
-                        <img src='/storage/recipes/default.svg' id='imagePreview'>
+                        <img src='{{ asset('storage/recipes/default.svg') }}' id='imagePreview'>
                     </label>
 
                     <input type="file" accept="image/jpg, image/jpeg, image/png" class="d-none @error('image') is-invalid @enderror" value="{{ old('image') }}" name="image" id='image'>
@@ -136,6 +136,6 @@
     </div>
 @endsection
 @section('scripts')
-    <script src='/js/recipes/create.js'></script>
+    <script src='{{ asset('js/recipes/create.js') }}'></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 @endsection

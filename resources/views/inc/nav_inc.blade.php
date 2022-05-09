@@ -2,7 +2,7 @@
     <div class="nav-container">
         <div class="logo-container">
             <a class='logo' href="{{ url('/') }}" role='logo'>
-                <img src='/images/ZestyIcon.svg'>
+                <img src='{{ asset('images/ZestyIcon.svg') }}'>
                 Zesty
             </a>
         </div>
@@ -20,7 +20,7 @@
         <form action='/search' method='GET'>
             <input id='q' type='text' name='q' placeholder='Search' role='search' value='{{ $q ?? null }}'>
             <button type='submit'>
-                <img src='/images/iconSearch.svg'>
+                <img src='{{ asset('images/iconSearch.svg') }}'>
             </button>
         </form>
     </div>
@@ -56,7 +56,7 @@
     <div class="nav-container">
         <div class="logo-container">
             <a class='logo' href="{{ url('/') }}" role='logo'>
-                <img src='/images/ZestyIcon.svg'>
+                <img src='{{ asset('images/ZestyIcon.svg') }}'>
                 Zesty
             </a>
         </div>
@@ -64,7 +64,7 @@
             <form action='/search' method='GET'>
                 <input id='q' type='text' name='q' placeholder='Search' role='search' value='{{ $q ?? null }}'>
                 <button type='submit'>
-                    <img src='/images/iconSearch.svg'>
+                    <img src='{{ asset('images/iconSearch.svg') }}'>
                 </button>
             </form>
         </div>

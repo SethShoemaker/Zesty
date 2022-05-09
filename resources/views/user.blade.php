@@ -43,6 +43,3 @@
         </div> 
     </section>
 @endsection
-@section('scripts')
-    <script src='/js/dashboard/dashboard.js'></script>
-@endsection

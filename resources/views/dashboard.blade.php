@@ -28,7 +28,7 @@
             @csrf
             <div class="col-12" id="avatarContainer">
                 <label for='avatar' id="avatarFrame">
-                    <img id='editIcon' src='/images/iconEdit.svg'>
+                    <img id='editIcon' src='{{ asset('images/iconEdit.svg') }}'>
                     <img id='avatarPreview' src="{{ asset('/storage/avatars/' . $avatar) }}">
                 </label>
                 <input type="file" accept="image/jpg, image/jpeg, image/png" name="avatar" class='d-none' id="avatar">
@@ -89,5 +89,5 @@
     </section>
 @endsection
 @section('scripts')
-    <script src='/js/dashboard.js'></script>
+    <script src='{{ asset('js/dashboard.js') }}'></script>
 @endsection

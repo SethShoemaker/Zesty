@@ -134,6 +134,6 @@
     </div>
 @endsection
 @section('scripts')
-    <script src='/js/recipes/create.js'></script>
+    <script src='{{ asset('js/recipes/create.js') }}'></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 @endsection
