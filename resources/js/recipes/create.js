@@ -9,7 +9,7 @@ console.log($('#ingredients').val());
         $.each(oldIngredient,function(index){
             let currentOldIngredient = oldIngredient[index];
             $('#ingredientsList').append(
-                '<li class="list-group-item fs-6" value=\'' + currentOldIngredient + '\'><a onclick="this.parentNode.remove()"><img src="/images/iconExit.svg"></a>' + currentOldIngredient + '</li>'
+                '<li class="list-group-item fs-6" value=\'' + currentOldIngredient + '\'><a onclick="this.parentNode.remove()">X</a>' + currentOldIngredient + '</li>'
             );
         });
     }
@@ -45,7 +45,7 @@ console.log($('#ingredients').val());
         }
         if (error != true) {
             $('#ingredientsList').append(
-                '<li class="list-group-item fs-6" value=\'' + ingredient + '\'><a onclick="this.parentNode.remove()"><img src="/images/iconExit.svg"></a>' + ingredient + '</li>'
+                '<li class="list-group-item fs-6" value=\'' + ingredient + '\'><a onclick="this.parentNode.remove()">X</a>' + ingredient + '</li>'
             );
             $("#ingredientQuantity").removeClass('is-invalid').val('');
             $("#ingredientName").removeClass('is-invalid').val('');

@@ -205,5 +205,7 @@ class RecipesController extends Controller
         }
 
         $recipe->delete();
+
+        return redirect('/dashboard');
     }
 }

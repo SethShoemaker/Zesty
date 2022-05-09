@@ -15,6 +15,13 @@
                 <p>Created by: <a href='{{ url('/user/' . $username)}}'>{{ $username }}</a></p>
                 @if ($user_id === Auth::id())
                     <a href='{{ url('/recipe/' . $id . "/edit") }}' class='btn btn-primary'>Edit</a>
+                    <a class="btn btn-delete" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('delete-form').submit();">
+                        Delete
+                    </a>
+                    <form id="delete-form" action="{{ route('recipe.destroy', $id) }}" method="POST" class="d-none">
+                        @csrf
+                        @method('DELETE')
+                    </form>
                 @endif
                 </div>
                 <div id="recipe-image">

@@ -4,6 +4,11 @@
 // Form styles
 @import "../inc/form.scss";
 
+.btn-delete{
+    background-color: red;
+    color:#fff !important;
+}
+
 #outer-container{
     margin-top:55px;
 }
