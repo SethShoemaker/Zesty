@@ -4,12 +4,13 @@
     "/js/recipes/create.js": "/js/recipes/create.js",
     "/js/dashboard.js": "/js/dashboard.js",
     "/css/app.css": "/css/app.css",
-    "/css/recipes/show.css": "/css/recipes/show.css",
     "/css/recipes/create.css": "/css/recipes/create.css",
     "/css/auth/auth.css": "/css/auth/auth.css",
+    "/css/error.css": "/css/error.css",
     "/css/main.css": "/css/main.css",
     "/css/user.css": "/css/user.css",
     "/css/dashboard.css": "/css/dashboard.css",
     "/css/welcome.css": "/css/welcome.css",
-    "/css/recipes/index.css": "/css/recipes/index.css"
+    "/css/recipes/index.css": "/css/recipes/index.css",
+    "/css/recipes/show.css": "/css/recipes/show.css"
 }

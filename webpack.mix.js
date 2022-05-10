@@ -24,6 +24,8 @@ mix
     .sass('resources/scss/app.scss', 'public/css')
     .sass('resources/scss/main.scss', 'public/css')
 
+    // Error
+    .sass('resources/scss/error.scss', 'public/css')
 
     // Auth
     .sass('resources/scss/auth/auth.scss', 'public/css/auth')
