@@ -98,7 +98,7 @@ class RecipesController extends Controller
     public function show($id)
     {
 
-        $query = DB::table('recipes')
+        $recipe = DB::table('recipes')
             ->select(
                 'recipes.id',
                 'recipes.title',
@@ -112,9 +112,11 @@ class RecipesController extends Controller
             )
             ->join('users', 'recipes.user_id', '=', 'users.id')
             ->where('recipes.id', '=',  $id)
-            ->get();
+            ->first();
 
-        $recipe = $query[0];
+        if ($recipe === null) {
+            abort(404);
+        }
 
         return view(
             'recipes.show',
@@ -184,7 +186,7 @@ class RecipesController extends Controller
         }
 
         $recipe->ingredients = $request['ingredients'];
-        $recipe->instructions = $request['instructions'];
+        $recipe->instructions = $request['instructions'] ?? null;
         $recipe->save();
 
         return redirect('/recipe/' . $recipe->id);
