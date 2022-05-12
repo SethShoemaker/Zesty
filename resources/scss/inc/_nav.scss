@@ -66,37 +66,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-#desktop-search > form{
-    display:grid;
-    grid-template-columns: auto 40px;
-    height:32px;
-    width:40vw;
-    max-width: 600px;
-    background-color: #fff;
-}
-#desktop-search > form > input{
-    border: none;
-    font-weight: 300;
-    color: $grey;
-}
-#desktop-search > form input:focus {
-    outline: none;
-    border:inherit !important;
-    border-radius:none !important;
-}
-#desktop-search > form > button{
-    width:40px;
-    height:32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: $zestyGreen;
-    border: none;
-}
-#desktop-search > form > button > img{
-    height:65%;
+
+    form{
+        display:grid;
+        grid-template-columns: auto 40px;
+        height:32px;
+        width:40vw;
+        max-width: 600px;
+        background-color: #fff;
+    }
+    form > input{
+        border: none;
+        font-weight: 300;
+        color: $grey;
+    }
+    form input:focus {
+        outline: none;
+        border:inherit !important;
+        border-radius:none !important;
+    }
+    form > button{
+        width:40px;
+        height:32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: $zestyGreen;
+        border: none;
+    }
+    form > button > img{
+        height:65%;
+    }
 }
 
 #desktop-auth{

@@ -1,0 +1,91 @@
+// variables
+@import 'variables.scss';
+
+
+#outer-container{
+    input,
+    textarea,
+    select{
+        border:1px solid $grey !important;
+        border-radius: 0 !important;
+        background-color: $offWhiteLight;
+        font-weight: 300 !important;
+        resize: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus{
+        box-shadow: none;
+        background-color: $offWhiteDark;
+        border:inherit;
+    }
+
+    button:focus{
+        box-shadow: none;
+    }
+
+    .is-invalid,
+    .is-invali:focus{
+        box-shadow: none !important;
+        border-color:#dc3545 !important;
+    }
+
+    .btn{
+        margin-left:0 12px;
+        border: none !important;
+        border-radius: 0 !important;
+        color: $grey;
+        border: none;
+        font-weight: 500 !important;
+        letter-spacing: 0.7px;
+    }
+
+    .form-check-input,
+    .form-check-label{
+        cursor: pointer;
+    }
+
+    .form-check-input{
+        background-color: $offWhiteLight !important;
+    }
+
+
+    .form-check-input:checked{
+        background-color: $zestyGreen !important;
+    }
+    
+    .btn-link{
+        background-color: #fff !important;
+        font-size:0.95rem;
+        color:#000;
+    }
+    
+    .btn-secondary{
+        background-color: $grey;
+        color:#fff;
+    }
+    
+    .btn-link{
+        text-decoration: none;
+    }
+    
+    .btn-link:hover{
+        text-decoration: underline;
+    }
+    
+    .btn-primary {
+        background-color: #1e8b1e;
+        color: #fff;
+    }
+    
+    .btn-primary:hover {
+        background-color: $zestyGreen;
+    }
+    
+    @media screen and (max-width:768px) {
+        .btn{
+            font-size:3vw;
+        }
+    }
+}

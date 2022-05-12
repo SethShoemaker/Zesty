@@ -60,16 +60,16 @@
     display: flex;
     justify-content: center;
     align-items:flex-end; 
-}
 
-.recipe-title > h3{
-    margin:0;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    padding:0 3px;
-    word-break:keep-all;
+    h3{
+        margin:0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        padding:0 3px;
+        word-break:keep-all;
+    }
 }
 
 #no-results{
@@ -80,10 +80,6 @@
     #recipes > .container > .h1{
         font-size:24px;
     }
-
-    // .recipe-image{
-    //     height:8vw;
-    // }
     
     .recipe-title > h3{
         font-size: 12px;

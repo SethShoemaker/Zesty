@@ -1,8 +1,8 @@
 // variables
-@import 'inc/variables.scss';
+@import 'inc/_variables.scss';
 
 // Form styles
-@import "inc/form.scss";
+@import "inc/_form.scss";
 
 // User styles
 @import "user.scss";
@@ -63,6 +63,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    img{
+        max-height:100%;
+        max-width:100%;
+    }
 }
 
 #editIcon{
@@ -74,11 +79,6 @@
     padding:4px;
     border-radius:50%;
     background-color: $grey;
-}
-
-#avatarFrame > img{
-    max-height:100%;
-    max-width:100%;
 }
 
 @media screen and (max-width:768px) {

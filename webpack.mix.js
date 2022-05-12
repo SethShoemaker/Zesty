@@ -48,7 +48,4 @@ mix
 
 
     // User
-    .sass('resources/scss/user.scss', 'public/css')
-
-
-    .sourceMaps();
+    .sass('resources/scss/user.scss', 'public/css');

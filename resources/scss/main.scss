@@ -1,5 +1,5 @@
 // variables
-@import 'inc/variables.scss';
+@import 'inc/_variables.scss';
 
 body{
     font-family: $primary_font_family;
@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
 }
 
 // nav
-@import 'inc/nav.scss';
+@import 'inc/_nav.scss';
 
 main{
     background-color: $offWhiteLight;
