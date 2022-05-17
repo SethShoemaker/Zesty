@@ -32,6 +32,7 @@ class RecipesController extends Controller
 
         $recipes = Recipe::where('title', 'LIKE', "%" . $q . "%")
             ->orWhere('description', 'LIKE', '%' . $q . '%')
+            ->orWhere('ingredients', 'LIKE', '%' . $q . '%')
             ->orWhere('instructions', 'LIKE', '%' . $q . '%')
             ->simplePaginate(60)
             ->withPath('/search?q=' . $q);
