@@ -25,7 +25,7 @@ class RecipeSeeder extends Seeder
 
             Recipe::create(array(
                 'title' => $recipe->title,
-                'user_id' => rand(1, 40),
+                'user_id' => rand(1, 20),
                 'ingredients' => json_encode($recipe->ingredients),
                 'instructions' => $recipe->instructions ?? null,
             ));

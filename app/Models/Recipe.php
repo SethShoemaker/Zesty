@@ -22,6 +22,8 @@ class Recipe extends Model
         'image',
         'ingredients',
         'instructions',
+        'created_by_user_id',
+        'updated_by_user_id',
     ];
 
     /**
