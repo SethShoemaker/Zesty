@@ -29,7 +29,7 @@ class RecipeRequest extends FormRequest
             'description' => ['nullable', 'max:500'],
             'image' => ['nullable', 'mimes:jpg,jpeg,png', 'max:5048'],
             'ingredients' => ['required', 'json'],
-            'instructions' => ['nullable', 'max:1500'],
+            'instructions' => ['nullable', 'max:5000'],
         ];
     }
 }

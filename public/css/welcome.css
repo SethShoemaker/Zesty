@@ -109,3 +109,32 @@
 #pagination-next {
   background-color: #1e8b1e;
 }
+
+.btn {
+  margin-left: 0 12px;
+  border: none !important;
+  border-radius: 0 !important;
+  border: none;
+  font-weight: 500 !important;
+  font-size: calc(0.7rem + 0.4vw);
+  letter-spacing: 0.7px;
+}
+
+.btn-secondary {
+  background-color: #222222;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #1e8b1e;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #1e8b1e;
+}
+
+.btn-delete {
+  background-color: #d00101;
+  color: #fff !important;
+}

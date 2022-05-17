@@ -25,6 +25,9 @@ $(function () {
     e.preventDefault();
     updateForm('hide');
   });
+  $('#screen-overlay').on('click', function () {
+    updateForm('hide');
+  });
   $('#avatar').on('change', function () {
     var file = this.files[0];
     var reader = new FileReader();

@@ -1,76 +1,66 @@
-#outer-container input,
-#outer-container textarea,
-#outer-container select {
-  border: 1px solid #222222 !important;
-  border-radius: 0 !important;
-  background-color: #f5f5f5;
-  font-weight: 300 !important;
-  resize: none;
-}
-#outer-container input:focus,
-#outer-container textarea:focus,
-#outer-container select:focus {
-  box-shadow: none;
-  background-color: #e0e0e0;
-  border: inherit;
-}
-#outer-container button:focus {
-  box-shadow: none;
-}
-#outer-container .is-invalid,
-#outer-container .is-invali:focus {
-  box-shadow: none !important;
-  border-color: #dc3545 !important;
-}
-#outer-container .btn {
+.btn {
   margin-left: 0 12px;
   border: none !important;
   border-radius: 0 !important;
-  color: #222222;
   border: none;
   font-weight: 500 !important;
+  font-size: calc(0.7rem + 0.4vw);
   letter-spacing: 0.7px;
 }
-#outer-container .form-check-input,
-#outer-container .form-check-label {
-  cursor: pointer;
-}
-#outer-container .form-check-input {
-  background-color: #f5f5f5 !important;
-}
-#outer-container .form-check-input:checked {
-  background-color: #1e8b1e !important;
-}
-#outer-container .btn-link {
-  background-color: #fff !important;
-  font-size: 0.95rem;
-  color: #000;
-}
-#outer-container .btn-secondary {
+
+.btn-secondary {
   background-color: #222222;
   color: #fff;
 }
-#outer-container .btn-link {
-  text-decoration: none;
-}
-#outer-container .btn-link:hover {
-  text-decoration: underline;
-}
-#outer-container .btn-primary {
+
+.btn-primary {
   background-color: #1e8b1e;
   color: #fff;
 }
-#outer-container .btn-primary:hover {
+
+.btn-primary:hover {
   background-color: #1e8b1e;
-}
-@media screen and (max-width: 768px) {
-  #outer-container .btn {
-    font-size: 3vw;
-  }
 }
 
 .btn-delete {
-  background-color: red;
+  background-color: #d00101;
+  color: #fff !important;
+}
+
+#delete-confirmation {
+  display: none;
+  grid-template-rows: 1fr 1fr;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 40vw;
+  min-width: 250px;
+  background-color: #fff;
+}
+#delete-confirmation #delete-prompt {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+#delete-confirmation #delete-prompt p {
+  font-size: calc(1rem + 0.7vw);
+}
+#delete-confirmation #delete-prompt p span {
+  font-weight: 400;
+  font-size: calc(1.2rem + 1.3vw);
+  margin-bottom: 40px;
+}
+#delete-confirmation #delete-buttons {
+  width: 90%;
+  margin: 0 auto 5vh auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#delete-confirmation #delete-buttons #delete-cancel {
+  background-color: #222222;
   color: #fff !important;
 }
 
@@ -99,34 +89,29 @@ section {
   min-width: 40vw;
   max-width: 70vw;
 }
-
 #recipe-details h1 {
   font-weight: 500;
-  font-size: 39px;
+  font-size: calc(1rem + 2vw);
   margin: 5vh 10px 10px 0;
   letter-spacing: 0.7px;
 }
-
 #recipe-details h2 {
   font-weight: 400;
-  font-size: 21px;
-  margin-bottom: 2px;
+  font-size: calc(1rem + 0.9vw);
+  margin-bottom: 8px;
   letter-spacing: 0.5px;
 }
-
 #recipe-details p {
   font-weight: 200;
-  font-size: 21px;
-  margin-bottom: 10px;
+  font-size: calc(0.7rem + 0.9vw);
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
-
 #recipe-details p a {
   font-weight: 400;
   color: #222222;
   text-decoration: none;
 }
-
 #recipe-details p a:hover {
   text-decoration: underline;
 }
@@ -146,14 +131,14 @@ section {
 }
 
 .h5 {
-  font-size: 21px;
+  font-size: calc(0.9rem + 0.9vw);
   padding-bottom: 5px;
 }
 
 #ingredients > ul > li {
   min-height: 20px;
   font-weight: 200;
-  font-size: 15.5px;
+  font-size: calc(0.8rem + 0.4vw);
   letter-spacing: 0.5px;
   margin-bottom: 7px;
 }
@@ -161,35 +146,12 @@ section {
 #instructions > p {
   margin-left: 5px;
   font-weight: 200;
-  font-size: 15.5px;
+  font-size: calc(0.8rem + 0.4vw);
   letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 768px) {
   #recipe-details h1 {
     margin-top: 10px;
-    font-size: calc(1rem + 2vw);
-  }
-
-  #recipe-details h2 {
-    font-size: calc(0.5rem + 2vw);
-  }
-
-  #recipe-details p {
-    font-size: calc(0.5rem + 2vw);
-  }
-
-  .h5 {
-    font-size: calc(0.4rem + 2vw);
-  }
-
-  #ingredients > ul {
-    padding-left: 5%;
-  }
-
-  #description > p,
-#ingredients > ul > li,
-#instructions > p {
-    font-size: calc(0.5rem + 1vw);
   }
 }

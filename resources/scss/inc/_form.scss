@@ -1,5 +1,10 @@
 // variables
-@import 'variables.scss';
+@import '_variables.scss';
+
+
+// button styles
+@import '_button.scss';
+
 
 
 #outer-container{
@@ -31,16 +36,6 @@
         border-color:#dc3545 !important;
     }
 
-    .btn{
-        margin-left:0 12px;
-        border: none !important;
-        border-radius: 0 !important;
-        color: $grey;
-        border: none;
-        font-weight: 500 !important;
-        letter-spacing: 0.7px;
-    }
-
     .form-check-input,
     .form-check-label{
         cursor: pointer;
@@ -58,12 +53,7 @@
     .btn-link{
         background-color: #fff !important;
         font-size:0.95rem;
-        color:#000;
-    }
-    
-    .btn-secondary{
-        background-color: $grey;
-        color:#fff;
+        color:$grey;
     }
     
     .btn-link{
@@ -72,20 +62,5 @@
     
     .btn-link:hover{
         text-decoration: underline;
-    }
-    
-    .btn-primary {
-        background-color: #1e8b1e;
-        color: #fff;
-    }
-    
-    .btn-primary:hover {
-        background-color: $zestyGreen;
-    }
-    
-    @media screen and (max-width:768px) {
-        .btn{
-            font-size:3vw;
-        }
     }
 }
