@@ -59,10 +59,12 @@
             </ul>
         </section>
         <section id="instructions">
-            <h2 class='h5'>Instructions</h2>
-            <p>
-                {{ $instructions }}
-            </p>
+            @if( $instructions != null)
+                <h2 class='h5'>Instructions</h2>
+                <p>
+                    {{ $instructions }}
+                </p>
+            @endif
         </section>
     </div>
 @endsection

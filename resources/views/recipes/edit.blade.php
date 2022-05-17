@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-12 my-3">
                     <label for="image">
-                        Image (optional)
+                        Image
                     </label>
 
                     <label for='image' id='imageFrame' @error('image') class='is-invalid' @enderror>
