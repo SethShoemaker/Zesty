@@ -3,16 +3,18 @@ var __webpack_exports__ = {};
 /*!******************************!*\
   !*** ./resources/js/main.js ***!
   \******************************/
-$(document).ready(function () {
+$(function () {
   function mobileSearch(action) {
     if (action == 'show') {
       $('#screen-overlay').show();
       $('#mobile-search').css('display', 'flex');
+      $('body').css("overflow", "hidden");
     }
 
     if (action == 'hide') {
       $('#screen-overlay').hide();
       $('#mobile-search').hide();
+      $('body').css("overflow", "show");
     }
   }
 
@@ -20,11 +22,13 @@ $(document).ready(function () {
     if (action == 'show') {
       $('#screen-overlay').show();
       $('#mobile-profile').css('display', 'flex');
+      $('body').css("overflow", "hidden");
     }
 
     if (action == 'hide') {
       $('#screen-overlay').hide();
       $('#mobile-profile').hide();
+      $('body').css("overflow", "show");
     }
   }
 

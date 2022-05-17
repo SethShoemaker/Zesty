@@ -3,78 +3,58 @@
   padding-bottom: 2vh;
   border-bottom: 2px solid #222222;
 }
-
-#profileHeading {
+#profile #profileHeading {
   padding: 3vh 5%;
   display: flex;
   align-items: center;
 }
-
-#userDetails,
-#userAvatar {
+#profile #userDetails,
+#profile #userAvatar {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-
-#userAvatar > img {
-  max-width: 22vw;
-  max-height: 21vh;
+#profile #userAvatar > img {
+  max-width: 20vw;
+  max-height: 18vh;
   margin-right: 2vw;
 }
-
-#userDetails {
+#profile #userDetails {
   max-width: 55vw;
   word-break: break-all;
 }
-
-#userDetails h1 {
+#profile #userDetails h1 {
   font-weight: 500;
-  font-size: 56px;
+  font-size: calc(1.3rem + 3.1vw);
   margin-bottom: 6px;
   letter-spacing: 0.7px;
 }
-
-#userDetails h2 {
+#profile #userDetails h2 {
   font-weight: 400;
-  font-size: 30px;
+  font-size: calc(0.8rem + 1vw);
   margin-bottom: 2px;
   letter-spacing: 0.5px;
 }
-
-#userDetails p {
+#profile #userDetails p {
   font-weight: 200;
-  font-size: 21px;
+  font-size: calc(0.5rem + 0.9vw);
   margin-bottom: 0px;
   letter-spacing: 0.5px;
 }
-
-#userSummary {
+#profile #userSummary {
   margin-left: 8%;
   font-weight: 200;
-  font-size: 21px;
+  font-size: calc(1.5rem + 0.2vw);
   width: 60%;
   letter-spacing: 0.5px;
 }
-
-@media screen and (max-width: 768px) {
-  #profileHeading h1 {
-    font-size: 7.3vw;
-  }
-
-  #profileHeading h2 {
-    font-size: 4vw;
-  }
-
-  #profileHeading p {
-    font-size: 3vw;
-  }
-
-  #userSummary {
+@media (max-width: 768px) {
+  #profile #userSummary {
     width: 100%;
     font-size: 3vw;
   }
 }
+
 .container {
   width: 89vw;
 }

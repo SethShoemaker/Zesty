@@ -104,15 +104,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
 
-#desktop-auth > a,
-#desktop-auth > .dropdown > a{
-    margin-left:20px;
-    color: #fff;
-    text-decoration: none;
-    font-size:1.1rem;
-    letter-spacing: 1px;
+    > a,
+    > .dropdown > a{
+        margin-left:20px;
+        color: #fff;
+        text-decoration: none;
+        font-size:1.1rem;
+        letter-spacing: 1px;
+    }
 }
 
 .dropdown-menu{
@@ -138,24 +138,27 @@
     left:0;
     right:0;
     background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: 2;
 }
 
 #mobile-icons{
     display:flex;
     align-items: center;
     justify-content: flex-end;
-}
-#mobile-icons > a{
-    margin-left:20px;
-    height:18px;
-    width:18px;
-}
-#mobile-icons > a > img{
-    max-height:100%;
-    max-width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+
+    >a{
+        margin-left:20px;
+        height:18px;
+        width:18px;
+        
+        >img{
+            max-height:100%;
+            max-width:100%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 
 #mobile-search{
@@ -166,53 +169,56 @@
     background-color: $grey;
     display: none;
     align-items: center;
-}
+    z-index: 3;
 
-#mobile-search-hide{
-    margin:0 2% 0 2%;
-    height:35px;
-    width:10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    #mobile-search-hide{
+        margin:0 2% 0 2%;
+        height:35px;
+        width:10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-#mobile-search-hide > img{
-    max-height: 28px;
-    max-width: 28px;
-}
+        >img{
+            max-height: 28px;
+            max-width: 28px;
+        }
+    }
 
-#mobile-search > form{
-    margin-right:2%;
-    display:grid;
-    grid-template-columns: auto 28px;
-    height:28px;
-    width:84%;
-    background-color: #fff;
-}
-#mobile-search > form > input{
-    font-size: 13px;
-    border: none;
-    font-weight: 300;
-    color: $grey;
-}
-#mobile-search > form input:focus {
-    outline: none;
-    border:inherit !important;
-    border-radius:none !important;
-}
-#mobile-search > form > button{
-    width:30px;
-    height:28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: $zestyGreen;
-    border: none;
-}
-#mobile-search > form > button > img{
-    height:65%;
+    >form{
+        margin-right:2%;
+        display:grid;
+        grid-template-columns: auto 28px;
+        height:28px;
+        width:84%;
+        background-color: #fff;
+
+        input,
+        input:focus{
+            font-size: 13px;
+            border: none;
+            font-weight: 300;
+            color: $grey;
+            outline: none;
+            border-radius:none !important;
+        }
+
+        >button{
+            width:30px;
+            height:28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: $zestyGreen;
+            border: none;
+
+            >img{
+                height:65%;
+            }
+        }
+
+    }
 }
 
 #mobile-profile{
@@ -224,41 +230,39 @@
     flex-direction: column;
     list-style: none;
     background-color: $grey;
-}
+    z-index: 3;
 
-#mobile-profile > a{
-    margin:9px 0;
-    padding:1px 0;
-}
+    >a{
+        margin:9px 0;
+        padding:1px 0;
+        margin-left:2rem;
+        color:#fff;
+        text-decoration: none;
+        font-size: 16px;
+    }
 
-#mobile-profile > a{
-    margin-left:2rem;
-    color:#fff;
-    text-decoration: none;
-    font-size: 16px;
-}
+    #mobile-profile-hide{
+        position:fixed;
+        top:7px;
+        right:7px;
+        height:28px;
+        width:28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-#mobile-profile-hide{
-    position:fixed;
-    top:7px;
-    right:7px;
-    height:28px;
-    width:28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        >a{
+            padding:none !important;
+            height:100%;
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-#mobile-profile-hide > a{
-    padding:none !important;
-    height:100%;
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#mobile-profile-hide > img{
-    max-height: 60%;
-    max-width: 100%;
+        >img{
+            max-height: 60%;
+            max-width: 100%;
+        }
+    }
 }

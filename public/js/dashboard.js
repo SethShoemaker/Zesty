@@ -6,13 +6,13 @@ var __webpack_exports__ = {};
 $(function () {
   function updateForm(action) {
     if (action == 'show') {
-      $('#editContainer').css("display", "flex");
+      $('#updateForm').css("display", "flex");
       $('#screen-overlay').show();
       $('body').css("overflow", "hidden");
     }
 
     if (action == 'hide') {
-      $('#editContainer').hide();
+      $('#updateForm').hide();
       $('#screen-overlay').hide();
       $('body').css("overflow", "scroll");
     }

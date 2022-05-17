@@ -15,42 +15,42 @@
             </a>
         </div>
     </div>
-    <div id="mobile-search">      
-        <a id="mobile-search-hide"><img src='{{ asset('images/iconClose.svg') }}'></a>
-        <form action='/search' method='GET'>
-            <input id='q' type='text' name='q' placeholder='Search' role='search' value='{{ $q ?? null }}'>
-            <button type='submit'>
-                <img src='{{ asset('images/iconSearch.svg') }}'>
-            </button>
-        </form>
-    </div>
-    <div id="mobile-profile">
-        <div id="mobile-profile-hide">
-            <a><img src='{{ asset('images/iconClose.svg') }}'></a>
-        </div>
-        @guest
-            <a href="{{ url('/login') }}">
-                Login
-            </a>
-
-            <a href="{{ url('/register') }}">
-                Register
-            </a>
-        @else
-            <a href="{{ url('/recipe/create') }}">Post Recipe</a>
-
-            <a href="{{ url('/dashboard') }}">Dashboard</a>
-
-            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                Logout
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        @endguest
-    </div>
 </nav>
+<div id="mobile-search">      
+    <a id="mobile-search-hide"><img src='{{ asset('images/iconClose.svg') }}'></a>
+    <form action='/search' method='GET'>
+        <input id='q' type='text' name='q' placeholder='Search' role='search' value='{{ $q ?? null }}'>
+        <button type='submit'>
+            <img src='{{ asset('images/iconSearch.svg') }}'>
+        </button>
+    </form>
+</div>
+<div id="mobile-profile">
+    <div id="mobile-profile-hide">
+        <a><img src='{{ asset('images/iconClose.svg') }}'></a>
+    </div>
+    @guest
+        <a href="{{ url('/login') }}">
+            Login
+        </a>
+
+        <a href="{{ url('/register') }}">
+            Register
+        </a>
+    @else
+        <a href="{{ url('/recipe/create') }}">Post Recipe</a>
+
+        <a href="{{ url('/dashboard') }}">Dashboard</a>
+
+        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+    @endguest
+</div>
 <div id="screen-overlay"></div>
 <nav id="desktop-nav">
     <div class="nav-container">

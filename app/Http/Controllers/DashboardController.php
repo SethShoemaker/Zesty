@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Recipe;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -51,8 +50,8 @@ class DashboardController extends Controller
     {
         $request->validate([
             'avatar' => ['mimes:png,jpg,jpeg', 'max:5048'],
-            'name' => ['string', 'max:25'],
-            'bio' => ['string', 'max:100']
+            'name' => ['max:25'],
+            'bio' => ['max:100']
         ]);
 
         $user_id = Auth::user()->id;

@@ -5,77 +5,67 @@
     background-color: #fff;
     padding-bottom:2vh;
     border-bottom: 2px solid $grey;
-}
 
-#profileHeading{
-    padding:3vh 5%;
-    display:flex;
-    align-items: center;
-}
 
-#userDetails,
-#userAvatar{
-    height:fit-content;
-}
-
-#userAvatar > img{
-    max-width:22vw;
-    max-height:21vh;
-    margin-right:2vw;
-}
-
-#userDetails{
-    max-width:55vw;
-    word-break: break-all;
-}
-
-#userDetails h1{
-    font-weight: 500;
-    font-size: 56px;
-    margin-bottom:6px;
-    letter-spacing: 0.7px;
-}
-
-#userDetails h2{
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom:2px;
-    letter-spacing: 0.5px;
-}
-
-#userDetails p{
-    font-weight: 200;
-    font-size: 21px;
-    margin-bottom:0px;
-    letter-spacing: 0.5px;
-}
-
-#userSummary{
-    margin-left:8%;
-    font-weight: 200;
-    font-size: 21px;
-    width:60%;
-    letter-spacing: 0.5px;
-}
-
-@media screen and (max-width:768px) {
-    #profileHeading h1{
-        font-size: 7.3vw;
+    #profileHeading{
+        padding:3vh 5%;
+        display:flex;
+        align-items: center;
     }
     
-    #profileHeading h2{
-        font-size: 4vw;
+    #userDetails,
+    #userAvatar{
+        height:fit-content;
     }
     
-    #profileHeading p{
-        font-size: 3vw;
+    #userAvatar > img{
+        max-width:20vw;
+        max-height:18vh;
+        margin-right:2vw;
     }
+    
+    #userDetails{
+        max-width:55vw;
+        word-break: break-all;
 
+        h1{
+            font-weight: 500;
+            font-size: calc(1.3rem + 3.1vw);
+            margin-bottom:6px;
+            letter-spacing: 0.7px;
+        }
+    }
+    
+    #userDetails h2{
+        font-weight: 400;
+        font-size: calc(0.8rem + 1vw);
+        margin-bottom:2px;
+        letter-spacing: 0.5px;
+    }
+    
+    #userDetails p{
+        font-weight: 200;
+        font-size: calc(0.5rem + 0.9vw);
+        margin-bottom:0px;
+        letter-spacing: 0.5px;
+    }
+    
     #userSummary{
-        width:100%;
-        font-size: 3vw;
+        margin-left:8%;
+        font-weight: 200;
+        font-size: calc(1.5rem + 0.2vw);
+        width:60%;
+        letter-spacing: 0.5px;
+    }
+    
+    @media (max-width:768px) {
+        #userSummary{
+            width:100%;
+            font-size: 3vw;
+        }
     }
 }
+
 
 .container{
     width:89vw;

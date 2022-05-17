@@ -8,18 +8,18 @@
     letter-spacing: 0.7px;
 }
 
-.btn-secondary{
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus{
     background-color: $grey;
     color:#fff;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #1e8b1e;
     color: #fff;
-}
-
-.btn-primary:hover {
-    background-color: $zestyGreen;
 }
 
 .btn-delete{

@@ -1,24 +1,28 @@
-$(document).ready(function(){
+$(function(){
 
     function mobileSearch(action){
         if(action == 'show'){
         $('#screen-overlay').show();
-        $('#mobile-search').css('display', 'flex');   
+        $('#mobile-search').css('display', 'flex');  
+        $('body').css("overflow", "hidden" ); 
         }
         if(action == 'hide'){
             $('#screen-overlay').hide();
             $('#mobile-search').hide();
+            $('body').css("overflow", "show" );
         }
     } 
     
     function mobileProfile(action){
         if(action == 'show'){
         $('#screen-overlay').show();
-        $('#mobile-profile').css('display', 'flex');   
+        $('#mobile-profile').css('display', 'flex');
+        $('body').css("overflow", "hidden" );   
         }
         if(action == 'hide'){
             $('#screen-overlay').hide();
             $('#mobile-profile').hide();
+            $('body').css("overflow", "show" );
         }
     }
     

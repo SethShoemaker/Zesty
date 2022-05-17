@@ -115,7 +115,6 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: flex-end;
 }
-
 #desktop-auth > a,
 #desktop-auth > .dropdown > a {
   margin-left: 20px;
@@ -144,6 +143,7 @@ body::-webkit-scrollbar {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 #mobile-icons {
@@ -151,13 +151,11 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: flex-end;
 }
-
 #mobile-icons > a {
   margin-left: 20px;
   height: 18px;
   width: 18px;
 }
-
 #mobile-icons > a > img {
   max-height: 100%;
   max-width: 100%;
@@ -174,9 +172,9 @@ body::-webkit-scrollbar {
   background-color: #222222;
   display: none;
   align-items: center;
+  z-index: 3;
 }
-
-#mobile-search-hide {
+#mobile-search #mobile-search-hide {
   margin: 0 2% 0 2%;
   height: 35px;
   width: 10%;
@@ -184,12 +182,10 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
 }
-
-#mobile-search-hide > img {
+#mobile-search #mobile-search-hide > img {
   max-height: 28px;
   max-width: 28px;
 }
-
 #mobile-search > form {
   margin-right: 2%;
   display: grid;
@@ -198,20 +194,15 @@ body::-webkit-scrollbar {
   width: 84%;
   background-color: #fff;
 }
-
-#mobile-search > form > input {
+#mobile-search > form input,
+#mobile-search > form input:focus {
   font-size: 13px;
   border: none;
   font-weight: 300;
   color: #222222;
-}
-
-#mobile-search > form input:focus {
   outline: none;
-  border: inherit !important;
   border-radius: none !important;
 }
-
 #mobile-search > form > button {
   width: 30px;
   height: 28px;
@@ -222,7 +213,6 @@ body::-webkit-scrollbar {
   background-color: #1e8b1e;
   border: none;
 }
-
 #mobile-search > form > button > img {
   height: 65%;
 }
@@ -236,21 +226,17 @@ body::-webkit-scrollbar {
   flex-direction: column;
   list-style: none;
   background-color: #222222;
+  z-index: 3;
 }
-
 #mobile-profile > a {
   margin: 9px 0;
   padding: 1px 0;
-}
-
-#mobile-profile > a {
   margin-left: 2rem;
   color: #fff;
   text-decoration: none;
   font-size: 16px;
 }
-
-#mobile-profile-hide {
+#mobile-profile #mobile-profile-hide {
   position: fixed;
   top: 7px;
   right: 7px;
@@ -260,8 +246,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
 }
-
-#mobile-profile-hide > a {
+#mobile-profile #mobile-profile-hide > a {
   padding: none !important;
   height: 100%;
   width: 100%;
@@ -269,8 +254,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
 }
-
-#mobile-profile-hide > img {
+#mobile-profile #mobile-profile-hide > img {
   max-height: 60%;
   max-width: 100%;
 }
