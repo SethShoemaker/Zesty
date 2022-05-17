@@ -18,8 +18,9 @@
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #1e8b1e;
-  color: #fff;
+  background-color: #1e8b1e !important;
+  color: #fff !important;
+  font-weight: 500 !important;
 }
 
 .btn-delete {

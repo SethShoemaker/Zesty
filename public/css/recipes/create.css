@@ -18,8 +18,9 @@
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #1e8b1e;
-  color: #fff;
+  background-color: #1e8b1e !important;
+  color: #fff !important;
+  font-weight: 500 !important;
 }
 
 .btn-delete {
@@ -27,7 +28,7 @@
   color: #fff !important;
 }
 
-#outer-container input,
+#outer-container input:not(.btn-primary),
 #outer-container textarea,
 #outer-container select {
   border: 1px solid #222222 !important;
@@ -47,7 +48,7 @@
   box-shadow: none;
 }
 #outer-container .is-invalid,
-#outer-container .is-invali:focus {
+#outer-container .is-invalid:focus {
   box-shadow: none !important;
   border-color: #dc3545 !important;
 }
@@ -71,6 +72,36 @@
 }
 #outer-container .btn-link:hover {
   text-decoration: underline;
+}
+
+.btn {
+  margin-left: 0 12px;
+  border: none !important;
+  border-radius: 0 !important;
+  border: none;
+  font-weight: 500 !important;
+  font-size: calc(0.7rem + 0.4vw);
+  letter-spacing: 0.7px;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #222222;
+  color: #fff;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1e8b1e !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+}
+
+.btn-delete {
+  background-color: #d00101;
+  color: #fff !important;
 }
 
 .container {
