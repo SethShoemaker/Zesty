@@ -9,7 +9,7 @@ $(function(){
         if(action == 'hide'){
             $('#screen-overlay').hide();
             $('#mobile-search').hide();
-            $('body').css("overflow", "show" );
+            $('body').css("overflow", "scroll" );
         }
     } 
     
@@ -22,7 +22,7 @@ $(function(){
         if(action == 'hide'){
             $('#screen-overlay').hide();
             $('#mobile-profile').hide();
-            $('body').css("overflow", "show" );
+            $('body').css("overflow", "scroll" );
         }
     }
     

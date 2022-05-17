@@ -15,57 +15,58 @@
     border: 2px solid $grey;
     padding:3vh 3vw;
     margin-top:60px;
-}
 
-.form-section{
-    margin-top:9vh;
-}
-.form-section:first-of-type{
-    margin-top:4vh;
-}
+    .form-section{
+        margin-top:9vh;
+    }
+    .form-section:first-of-type{
+        margin-top:4vh;
+    }
+    
+    #imageFrame {
+        margin:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        width: 100%;
+        background-color: $offWhiteLight;
+        border:1px dashed $grey;
+        cursor: pointer;
 
-#imageFrame {
-    margin:auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20vh;
-    width: 100%;
-    background-color: $offWhiteLight;
-    border:1px dashed $grey;
-    cursor: pointer;
-}
+        >img{
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+    
+    #imageFrame:hover{
+        background-color: $offWhiteDark;
+    }
+    
+    .list-group-item {
+        height: 26px !important;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        border: none !important;
+        font-weight: 300;
+        cursor: grab;
+        background-color: none !important;
 
-#imageFrame:hover{
-    background-color: $offWhiteDark;
-}
+        >a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 21.5px;
+            width: 21.5px;
+            cursor: pointer;
+            margin: 0 10px;
 
-#imageFrame > img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.list-group-item {
-    height: 26px !important;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    border: none !important;
-    font-weight: 300;
-    cursor: grab;
-    background-color: none !important;
-}
-
-.list-group-item > a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 21.5px;
-    width: 21.5px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-.list-group-item > a > img{
-    max-height: 100%;
-    max-width: 100%;
+            >img{
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+    }
 }
