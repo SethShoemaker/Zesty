@@ -36,6 +36,7 @@ mix
     .sass('resources/scss/recipes/show.scss', 'public/css/recipes')
     .sass('resources/scss/recipes/index.scss', 'public/css/recipes')
     .js('resources/js/recipes/create.js', 'public/js/recipes')
+    .js('resources/js/recipes/show.js', 'public/js/recipes')
 
 
     // Welcome

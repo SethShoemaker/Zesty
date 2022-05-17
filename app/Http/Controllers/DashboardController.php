@@ -29,7 +29,7 @@ class DashboardController extends Controller
     public function show()
     {
         $user = Auth::user();
-        $recipes = Recipe::where('user_id', $user->id)->simplePaginate(20);
+        $recipes = $user->recipes->paginate(20);
 
         return view('dashboard', [
             'username' => $user->username,

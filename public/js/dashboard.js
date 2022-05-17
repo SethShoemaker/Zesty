@@ -1,1 +1,40 @@
-$((function(){function e(e){"show"==e&&($("#editContainer").css("display","flex"),$("#screen-overlay").show(),$("body").css("overflow","hidden")),"hide"==e&&($("#editContainer").hide(),$("#screen-overlay").hide(),$("body").css("overflow","scroll"))}$("#updateBtn").on("click",(function(){e("show")})),$("#updateFormCancel").on("click",(function(n){n.preventDefault(),e("hide")})),$("#avatar").on("change",(function(){var e=this.files[0],n=new FileReader;n.onload=function(e){$("#avatarPreview").attr("src",e.target.result)},n.readAsDataURL(e)}))}));
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!***********************************!*\
+  !*** ./resources/js/dashboard.js ***!
+  \***********************************/
+$(function () {
+  function updateForm(action) {
+    if (action == 'show') {
+      $('#editContainer').css("display", "flex");
+      $('#screen-overlay').show();
+      $('body').css("overflow", "hidden");
+    }
+
+    if (action == 'hide') {
+      $('#editContainer').hide();
+      $('#screen-overlay').hide();
+      $('body').css("overflow", "scroll");
+    }
+  }
+
+  $("#updateBtn").on('click', function () {
+    updateForm('show');
+  });
+  $("#updateFormCancel").on('click', function (e) {
+    e.preventDefault();
+    updateForm('hide');
+  });
+  $('#avatar').on('change', function () {
+    var file = this.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function (event) {
+      $('#avatarPreview').attr("src", event.target.result);
+    };
+
+    reader.readAsDataURL(file);
+  });
+});
+/******/ })()
+;

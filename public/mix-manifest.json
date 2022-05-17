@@ -2,6 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/main.js": "/js/main.js",
     "/js/recipes/create.js": "/js/recipes/create.js",
+    "/js/recipes/show.js": "/js/recipes/show.js",
     "/js/dashboard.js": "/js/dashboard.js",
     "/css/app.css": "/css/app.css",
     "/css/recipes/create.css": "/css/recipes/create.css",
